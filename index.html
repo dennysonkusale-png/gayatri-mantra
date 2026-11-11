@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="no-js">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.remove('no-js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gayatri Mantra — The Universal Prayer of Light and Wisdom</title>
+<meta name="description" content="An interactive exploration of the Gayatri Mantra from Rigveda 3.62.10 — its meaning in four languages, the science of its vibration, and the esoteric significance of its twenty-four syllables.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   1. THEME TOKENS
+   ============================================================ */
+:root{
+  --font-latin:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-dev:'Noto Sans Devanagari','Tiro Devanagari Sanskrit',system-ui,sans-serif;
+  --font-sa:'Tiro Devanagari Sanskrit','Noto Sans Devanagari',serif;
+  --radius:20px;
+  --radius-sm:12px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --maxw:1180px;
+}
+
+html[data-theme="dark"]{
+  --bg:#07060f;
+  --head-bg:rgba(7,6,15,.78);
+  --bg-2:#0d0b21;
+  --bg-3:#100d28;
+  --card:rgba(255,255,255,.042);
+  --card-hover:rgba(255,255,255,.075);
+  --text:#efe9dd;
+  --text-strong:#fffaf0;
+  --muted:#a79fb8;
+  --line:rgba(240,205,130,.16);
+  --line-strong:rgba(240,205,130,.34);
+  --gold:#f2cd72;
+  --gold-2:#dfa63a;
+  --saffron:#ff8a3d;
+  --glow:rgba(242,205,114,.16);
+  --glow-2:rgba(255,138,61,.12);
+  --shadow:0 30px 70px -40px rgba(0,0,0,.95);
+  --shadow-lift:0 34px 80px -38px rgba(0,0,0,1);
+  --chip:rgba(242,205,114,.10);
+  --aura-1:rgba(242,205,114,.30);
+  --aura-2:rgba(126,87,255,.20);
+  --aura-3:rgba(255,138,61,.14);
+}
+
+html[data-theme="light"]{
+  --bg:#fbf6ec;
+  --head-bg:rgba(251,246,236,.82);
+  --bg-2:#f5ecdc;
+  --bg-3:#fdf9f1;
+  --card:rgba(255,255,255,.78);
+  --card-hover:rgba(255,255,255,.96);
+  --text:#2b2419;
+  --text-strong:#1a1610;
+  --muted:#6d6152;
+  --line:rgba(150,105,35,.20);
+  --line-strong:rgba(150,105,35,.42);
+  --gold:#a76a12;
+  --gold-2:#c98a1e;
+  --saffron:#d2600c;
+  --glow:rgba(215,160,60,.20);
+  --glow-2:rgba(210,96,12,.10);
+  --shadow:0 24px 50px -34px rgba(120,80,25,.55);
+  --shadow-lift:0 30px 60px -30px rgba(120,80,25,.60);
+  --chip:rgba(167,106,18,.09);
+  --aura-1:rgba(215,160,60,.34);
+  --aura-2:rgba(255,170,80,.20);
+  --aura-3:rgba(200,90,30,.12);
+}
+
+/* ============================================================
+   2. BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-latin);
+  background:var(--bg);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.68;
+  font-weight:300;
+  letter-spacing:.1px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  transition:background .55s var(--ease),color .45s var(--ease);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(1000px 700px at 8% -12%,var(--glow),transparent 62%),
+    radial-gradient(900px 600px at 92% 4%,var(--glow-2),transparent 60%),
+    radial-gradient(1200px 800px at 50% 110%,var(--glow),transparent 65%),
+    linear-gradient(175deg,var(--bg) 0%,var(--bg-2) 52%,var(--bg-3) 100%);
+  transition:background .55s var(--ease);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  opacity:.35;
+  background-image:radial-gradient(var(--line) .6px,transparent .6px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+  -webkit-mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+::selection{background:var(--gold);color:#14100a}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:22px}
+.dev{font-family:var(--font-dev);line-height:1.85}
+.sa{font-family:var(--font-sa);line-height:1.9}
+
+/* ============================================================
+   3. SCROLL PROGRESS + HEADER
+   ============================================================ */
+#progress{
+  position:fixed;top:0;left:0;height:2px;width:0%;
+  background:linear-gradient(90deg,var(--gold-2),var(--gold),var(--saffron));
+  z-index:200;box-shadow:0 0 14px var(--glow);
+  transition:width .1s linear;
+}
+
+.site-head{
+  position:sticky;top:0;z-index:120;
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  background:var(--head-bg);
+  border-bottom:1px solid var(--line);
+  transition:background .5s var(--ease),border-color .5s var(--ease),box-shadow .4s var(--ease);
+}
+.site-head.stuck{box-shadow:0 16px 40px -34px rgba(0,0,0,.9)}
+.head-in{display:flex;align-items:center;gap:18px;min-height:70px;padding-block:10px}
+
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.om{
+  display:grid;place-items:center;
+  width:42px;height:42px;border-radius:50%;
+  font-family:var(--font-sa);font-size:1.35rem;
+  color:var(--gold);
+  border:1px solid var(--line-strong);
+  background:radial-gradient(circle at 30% 25%,var(--chip),transparent 70%);
+  box-shadow:inset 0 0 18px -6px var(--glow);
+  transition:transform .6s var(--ease),box-shadow .6s var(--ease);
+}
+.brand:hover .om{transform:rotate(-8deg) scale(1.06);box-shadow:0 0 26px -6px var(--glow),inset 0 0 20px -4px var(--glow)}
+.brand-txt{display:flex;flex-direction:column;line-height:1.25}
+.brand-txt strong{font-weight:500;font-size:.94rem;letter-spacing:.4px;color:var(--text-strong)}
+.brand-txt small{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:400}
+
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{
+  position:relative;padding:8px 13px;border-radius:999px;
+  font-size:.86rem;font-weight:400;color:var(--muted);
+  transition:color .3s var(--ease),background .3s var(--ease);
+  white-space:nowrap;
+}
+.nav a:hover{color:var(--text-strong);background:var(--chip)}
+
+.controls{display:flex;align-items:center;gap:10px;margin-left:auto}
+.nav + .controls{margin-left:8px}
+
+.lang{
+  display:flex;align-items:center;gap:2px;padding:3px;
+  border:1px solid var(--line);border-radius:999px;background:var(--card);
+}
+.lang-btn{
+  padding:6px 11px;border-radius:999px;font-size:.76rem;font-weight:400;
+  color:var(--muted);letter-spacing:.2px;
+  transition:all .32s var(--ease);
+}
+.lang-btn:hover{color:var(--text-strong)}
+.lang-btn[aria-pressed="true"]{
+  color:#16110a;background:linear-gradient(140deg,var(--gold),var(--gold-2));
+  font-weight:500;box-shadow:0 6px 18px -10px var(--gold);
+}
+html[data-theme="dark"] .lang-btn[aria-pressed="true"]{color:#100c05}
+
+.icon-btn{
+  display:grid;place-items:center;width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--gold);
+  transition:all .35s var(--ease);
+}
+.icon-btn:hover{border-color:var(--line-strong);box-shadow:0 0 22px -8px var(--glow);transform:translateY(-1px)}
+.icon-btn svg{width:18px;height:18px}
+.theme-toggle .sun{display:none}
+html[data-theme="light"] .theme-toggle .sun{display:block}
+html[data-theme="light"] .theme-toggle .moon{display:none}
+.menu-btn{display:none}
+
+/* ============================================================
+   4. HERO
+   ============================================================ */
+.hero{position:relative;padding:clamp(58px,9vw,110px) 0 clamp(50px,7vw,90px);overflow:hidden}
+.aura{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
+.aura span{
+  position:absolute;border-radius:50%;
+  border:1px solid var(--line);
+  animation:breathe 13s var(--ease) infinite;
+  opacity:0;
+}
+.aura span:nth-child(1){width:280px;height:280px;animation-delay:0s;border-color:var(--aura-1)}
+.aura span:nth-child(2){width:440px;height:440px;animation-delay:1.6s;border-color:var(--aura-2)}
+.aura span:nth-child(3){width:620px;height:620px;animation-delay:3.2s;border-color:var(--aura-3)}
+.aura span:nth-child(4){width:820px;height:820px;animation-delay:4.8s;border-color:var(--aura-1);opacity:0}
+.aura::before{
+  content:"";position:absolute;width:min(560px,88vw);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,var(--aura-1) 0%,var(--aura-2) 38%,transparent 68%);
+  filter:blur(28px);opacity:.55;
+  animation:pulseGlow 9s ease-in-out infinite;
+}
+@keyframes breathe{
+  0%{transform:scale(.82);opacity:0}
+  22%{opacity:.85}
+  70%{opacity:.28}
+  100%{transform:scale(1.16);opacity:0}
+}
+@keyframes pulseGlow{0%,100%{transform:scale(.94);opacity:.42}50%{transform:scale(1.06);opacity:.68}}
+
+.hero-in{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  margin:0 0 22px;padding:7px 16px;border-radius:999px;
+  font-size:.7rem;font-weight:400;letter-spacing:2.2px;text-transform:uppercase;
+  color:var(--gold);background:var(--chip);border:1px solid var(--line);
+}
+.eyebrow::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--saffron);box-shadow:0 0 10px var(--saffron)}
+
+h1{
+  margin:0;max-width:20ch;
+  font-family:var(--font-latin);
+  font-size:clamp(2rem,5.2vw,3.6rem);
+  font-weight:300;line-height:1.18;letter-spacing:-.6px;
+  color:var(--text-strong);
+  text-wrap:balance;
+}
+h1 .accent{color:var(--gold);font-weight:500}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1 .accent{
+    background:linear-gradient(100deg,var(--gold-2),var(--gold) 45%,var(--saffron));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+}
+.lede{
+  margin:22px auto 0;max-width:62ch;
+  font-size:clamp(.95rem,1.5vw,1.08rem);color:var(--muted);font-weight:300;
+  text-wrap:pretty;
+}
+
+.mantra-card{
+  position:relative;margin-top:clamp(30px,5vw,48px);width:100%;max-width:820px;
+  padding:clamp(26px,4.5vw,44px) clamp(18px,4vw,48px);
+  border-radius:calc(var(--radius) + 8px);
+  border:1px solid var(--line);
+  background:linear-gradient(165deg,var(--card),transparent 78%);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  overflow:hidden;
+}
+.mantra-card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+  background:linear-gradient(140deg,var(--line-strong),transparent 42%,var(--line-strong));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.7;
+}
+.mantra{
+  margin:0;
+  font-family:var(--font-sa);
+  font-size:clamp(1.32rem,3.4vw,2.35rem);
+  line-height:1.85;letter-spacing:.4px;font-weight:400;
+  color:var(--gold);
+  text-wrap:balance;
+}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .mantra{
+    background:linear-gradient(102deg,var(--gold-2),var(--gold) 38%,var(--text-strong) 62%,var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+}
+.rom{
+  margin:18px 0 0;font-size:clamp(.78rem,1.5vw,.92rem);
+  color:var(--muted);font-weight:300;letter-spacing:.5px;line-height:1.9;
+  font-style:italic;
+}
+.rule{
+  width:64px;height:1px;margin:24px auto;
+  background:linear-gradient(90deg,transparent,var(--line-strong),transparent);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 24px;border-radius:999px;
+  font-size:.86rem;font-weight:400;letter-spacing:.3px;
+  border:1px solid var(--line);
+  transition:all .38s var(--ease);white-space:nowrap;
+}
+.btn.primary{
+  color:#171106;font-weight:500;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  border-color:transparent;
+  box-shadow:0 16px 34px -20px var(--gold);
+}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 22px 42px -18px var(--gold)}
+.btn.ghost{color:var(--text);background:var(--card)}
+.btn.ghost:hover{border-color:var(--line-strong);background:var(--card-hover);transform:translateY(-2px)}
+.btn .dot{
+  width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.85;
+  box-shadow:0 0 0 0 currentColor;
+}
+.btn.playing .dot{animation:ring 1.8s ease-out infinite}
+@keyframes ring{
+  0%{box-shadow:0 0 0 0 rgba(23,17,6,.45)}
+  70%{box-shadow:0 0 0 9px rgba(23,17,6,0)}
+  100%{box-shadow:0 0 0 0 rgba(23,17,6,0)}
+}
+.hint{margin:16px 0 0;font-size:.72rem;color:var(--muted);opacity:.8;letter-spacing:.3px}
+
+/* ============================================================
+   5. SECTIONS
+   ============================================================ */
+section{position:relative;padding:clamp(56px,8vw,96px) 0;scroll-margin-top:84px}
+.sec-head{max-width:760px;margin-bottom:clamp(30px,4vw,48px)}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.68rem;letter-spacing:2.4px;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin:0 0 14px;
+}
+.kicker::after{content:"";width:34px;height:1px;background:var(--line-strong)}
+h2{
+  margin:0 0 16px;
+  font-size:clamp(1.55rem,3.2vw,2.35rem);font-weight:300;line-height:1.24;
+  letter-spacing:-.4px;color:var(--text-strong);text-wrap:balance;
+}
+h2 strong{font-weight:500;color:var(--gold)}
+.sec-head p{margin:0;color:var(--muted);font-size:.98rem;font-weight:300;max-width:66ch;text-wrap:pretty}
+
+/* ---- overview ---- */
+.overview-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(22px,3vw,40px);align-items:start}
+.prose p{margin:0 0 16px;color:var(--muted);font-size:.96rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose .lead{color:var(--text);font-size:1.02rem}
+
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{
+  padding:18px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--card);
+  transition:all .4s var(--ease);
+}
+.fact:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:var(--shadow)}
+.fact b{display:block;font-size:1.28rem;font-weight:500;color:var(--gold);letter-spacing:-.4px}
+.fact span{display:block;margin-top:2px;font-size:.7rem;letter-spacing:.9px;text-transform:uppercase;color:var(--muted)}
+
+/* ---- four meanings ---- */
+.voices{margin-top:clamp(38px,5vw,58px)}
+.voices-head{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.voices-head h3{margin:0;font-size:1.02rem;font-weight:500;color:var(--text-strong);letter-spacing:.2px}
+.voices-head span{font-size:.76rem;color:var(--muted)}
+.voices-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
+.voice{
+  position:relative;padding:22px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--card);
+  transition:all .45s var(--ease);overflow:hidden;
+}
+.voice:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.voice[data-active="true"]{
+  border-color:var(--line-strong);
+  background:linear-gradient(160deg,var(--chip),var(--card));
+  box-shadow:0 0 0 1px var(--line-strong),0 22px 50px -34px var(--glow);
+}
+.voice .vl{
+  display:flex;align-items:center;gap:8px;margin-bottom:12px;
+  font-size:.66rem;letter-spacing:1.8px;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.voice .vl i{width:5px;height:5px;border-radius:50%;background:var(--saffron);font-style:normal}
+.voice p{margin:0;font-size:.9rem;color:var(--text);font-weight:300;line-height:1.75}
+.voice p.dev{font-size:1rem;line-height:1.95}
+
+/* ---- science ---- */
+.sci-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,30px);align-items:start}
+.sci-col{
+  padding:clamp(20px,2.6vw,28px);border-radius:var(--radius);
+  border:1px solid var(--line);background:var(--card);
+  box-shadow:var(--shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.sci-col h3{
+  display:flex;align-items:center;gap:12px;margin:0 0 6px;
+  font-size:1.06rem;font-weight:500;color:var(--text-strong);letter-spacing:.2px;
+}
+.sci-col h3 .glyph{
+  display:grid;place-items:center;width:36px;height:36px;flex:0 0 36px;
+  border-radius:11px;font-size:1rem;color:var(--gold);
+  border:1px solid var(--line);background:var(--chip);
+}
+.sci-col > p.sub{margin:0 0 18px;padding-left:48px;font-size:.8rem;color:var(--muted)}
+
+.acc{border-top:1px solid var(--line)}
+.acc:last-child{border-bottom:1px solid var(--line)}
+.acc-h{
+  display:flex;align-items:flex-start;gap:12px;width:100%;
+  padding:15px 2px;text-align:left;font-size:.92rem;font-weight:400;
+  color:var(--text);transition:color .3s var(--ease);
+}
+.acc-h:hover{color:var(--gold)}
+.acc-h .num{
+  flex:0 0 auto;font-size:.68rem;font-weight:500;color:var(--gold);
+  letter-spacing:1px;padding-top:3px;opacity:.8;font-variant-numeric:tabular-nums;
+}
+.acc-h .t{flex:1}
+.acc-h .chev{
+  flex:0 0 auto;width:16px;height:16px;margin-top:3px;
+  border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+  transform:rotate(45deg);transition:transform .4s var(--ease),border-color .3s;
+  border-radius:1px;
+}
+.acc.open .acc-h{color:var(--gold)}
+.acc.open .chev{transform:rotate(225deg);border-color:var(--gold)}
+.acc-b{overflow:hidden;max-height:0;transition:max-height .55s var(--ease)}
+.aksha .ins{display:none}
+html.no-js .aksha .ins{display:block;margin-top:6px;font-size:.68rem;color:var(--muted);line-height:1.55;font-weight:300}
+html.no-js .aksha{min-height:auto;padding-bottom:18px}
+.acc-b p{
+  margin:0;padding:0 2px 18px 34px;
+  font-size:.875rem;color:var(--muted);font-weight:300;line-height:1.78;
+}
+
+.evidence{
+  margin-top:clamp(22px,3vw,34px);padding:clamp(18px,2.6vw,26px);
+  border-radius:var(--radius-sm);border:1px solid var(--line);
+  border-left:2px solid var(--gold);
+  background:linear-gradient(100deg,var(--chip),transparent 70%);
+  font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.8;
+}
+.evidence b{color:var(--text-strong);font-weight:500}
+
+/* ---- aksharas ---- */
+.aksha-bar{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:22px}
+.aksha-bar .hint-line{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 15px;border-radius:999px;font-size:.76rem;
+  border:1px dashed var(--line-strong);color:var(--muted);
+}
+.aksha-bar .hint-line svg{width:14px;height:14px;color:var(--gold)}
+.counter{
+  margin-left:auto;font-size:.72rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);
+}
+.counter b{color:var(--gold);font-weight:500}
+
+.aksha-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(142px,1fr));
+  gap:12px;
+}
+.aksha{
+  position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;padding:20px 10px 16px;min-height:132px;
+  border-radius:var(--radius-sm);border:1px solid var(--line);
+  background:var(--card);text-align:center;overflow:hidden;
+  transition:transform .45s var(--ease),border-color .45s var(--ease),background .45s var(--ease),box-shadow .45s var(--ease);
+}
+.aksha::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;opacity:0;
+  background:radial-gradient(circle at 50% 0%,var(--glow),transparent 68%);
+  transition:opacity .45s var(--ease);pointer-events:none;
+}
+.aksha:hover,.aksha:focus-visible{
+  transform:translateY(-4px);border-color:var(--line-strong);
+  background:var(--card-hover);box-shadow:var(--shadow-lift);
+}
+.aksha:hover::after,.aksha:focus-visible::after{opacity:1}
+.aksha .n{
+  position:absolute;top:9px;left:11px;font-size:.6rem;font-weight:500;
+  color:var(--muted);opacity:.65;letter-spacing:1px;font-variant-numeric:tabular-nums;
+}
+.aksha .glyph{
+  font-family:var(--font-sa);font-size:1.72rem;line-height:1.35;
+  color:var(--gold);transition:transform .45s var(--ease),text-shadow .45s var(--ease);
+}
+.aksha:hover .glyph{transform:scale(1.07);text-shadow:0 0 22px var(--glow)}
+.aksha .rom{font-size:.68rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin:0}
+.aksha .attr{
+  margin-top:4px;font-size:.74rem;color:var(--text);font-weight:300;
+  line-height:1.4;max-width:100%;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+/* ---- japa counter ---- */
+.japa-card{
+  position:relative;max-width:620px;margin-inline:auto;text-align:center;
+  padding:clamp(26px,4vw,42px) clamp(20px,4vw,40px);
+  border-radius:calc(var(--radius) + 8px);border:1px solid var(--line);
+  background:linear-gradient(170deg,var(--card),transparent 82%);
+  box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:box-shadow .7s var(--ease),border-color .7s var(--ease);
+}
+.japa-card.done{
+  border-color:var(--line-strong);
+  box-shadow:0 0 0 1px var(--line-strong),0 0 70px -20px var(--glow),var(--shadow);
+}
+.japa-stats{display:flex;justify-content:center;gap:clamp(26px,6vw,64px);margin-bottom:24px}
+.japa-stats div{display:flex;flex-direction:column;gap:3px}
+.japa-stats b{font-size:1.3rem;font-weight:500;color:var(--gold);letter-spacing:-.4px;font-variant-numeric:tabular-nums}
+.japa-stats span{font-size:.64rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+
+.japa-btn{
+  position:relative;display:grid;place-items:center;margin:0 auto;
+  width:clamp(188px,44vw,232px);aspect-ratio:1;border-radius:50%;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at 50% 28%,var(--chip),transparent 72%);
+  transition:transform .18s var(--ease),box-shadow .5s var(--ease),border-color .4s var(--ease);
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;
+}
+.japa-btn:hover{border-color:var(--line-strong);box-shadow:0 0 44px -14px var(--glow)}
+.japa-btn:active{transform:scale(.975)}
+.japa-btn::after{
+  content:"";position:absolute;inset:-1px;border-radius:50%;
+  border:1px solid var(--gold);opacity:0;pointer-events:none;
+}
+.japa-btn.tick::after{animation:ripple .65s var(--ease)}
+@keyframes ripple{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(1.14)}}
+.japa-ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.japa-ring circle{fill:none;stroke-width:2.4}
+.japa-ring .track{stroke:var(--line)}
+.japa-ring .prog{stroke:url(#japaGrad);stroke-linecap:round;transition:stroke-dashoffset .45s var(--ease)}
+.japa-ring .s1{stop-color:var(--gold-2)}
+.japa-ring .s2{stop-color:var(--gold)}
+.japa-ring .s3{stop-color:var(--saffron)}
+.japa-inner{display:flex;flex-direction:column;align-items:center;gap:4px;pointer-events:none}
+.japa-num{
+  display:inline-block;font-size:clamp(2.5rem,8.5vw,3.4rem);font-weight:300;
+  line-height:1;color:var(--text-strong);font-variant-numeric:tabular-nums;letter-spacing:-1px;
+}
+.japa-btn.tick .japa-num{animation:numPop .38s var(--ease)}
+@keyframes numPop{0%{transform:scale(1)}42%{transform:scale(1.12)}100%{transform:scale(1)}}
+.japa-unit{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.japa-toast{
+  min-height:1.3em;margin:16px 0 0;font-size:.78rem;letter-spacing:.4px;color:var(--gold);
+  opacity:0;transform:translateY(5px);transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.japa-toast.show{opacity:1;transform:none}
+.japa-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:6px}
+.btn.small{padding:9px 17px;font-size:.78rem}
+.btn.small svg{width:14px;height:14px}
+#japaSound.off{color:var(--muted);opacity:.65}
+html.no-js .japa-btn{cursor:default}
+html.no-js .japa-actions{display:none}
+html.no-js .japa-card .hint{display:none}
+
+/* ---- floating japa button ---- */
+.japa-fab{
+  position:fixed;right:22px;bottom:22px;z-index:150;
+  width:66px;height:66px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--line-strong);color:var(--text-strong);
+  background:radial-gradient(circle at 50% 28%,var(--chip),var(--bg-2) 74%);
+  box-shadow:0 20px 44px -20px rgba(0,0,0,.7);
+  transition:opacity .45s var(--ease),transform .45s var(--ease),box-shadow .4s var(--ease);
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;
+}
+.japa-fab:hover{box-shadow:0 22px 50px -18px rgba(0,0,0,.75),0 0 34px -8px var(--glow)}
+.japa-fab:active{transform:scale(.95)}
+.japa-fab.hide{opacity:0;transform:translateY(16px) scale(.88);pointer-events:none}
+.japa-fab::after{
+  content:"";position:absolute;inset:-1px;border-radius:50%;
+  border:1px solid var(--gold);opacity:0;pointer-events:none;
+}
+.japa-fab.tick::after{animation:ripple .65s var(--ease)}
+.japa-fab-ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.japa-fab-ring circle{fill:none;stroke-width:6}
+.japa-fab-ring .track{stroke:var(--line)}
+.japa-fab-ring .prog{stroke:url(#fabGrad);stroke-linecap:round;transition:stroke-dashoffset .45s var(--ease)}
+.japa-fab-ring .s1{stop-color:var(--gold-2)}
+.japa-fab-ring .s2{stop-color:var(--gold)}
+.japa-fab-ring .s3{stop-color:var(--saffron)}
+.japa-fab-inner{display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1;pointer-events:none}
+.japa-fab-om{font-family:var(--font-sa);font-size:.6rem;color:var(--gold);opacity:.95}
+.japa-fab-num{font-size:.95rem;font-weight:500;letter-spacing:-.3px;font-variant-numeric:tabular-nums}
+.japa-fab.tick .japa-fab-num{animation:numPop .38s var(--ease)}
+@media (max-width:640px){.japa-fab{right:16px;bottom:16px;width:58px;height:58px}}
+html.no-js .japa-fab{display:none}
+
+/* ---- practice ---- */
+.practice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.step{
+  position:relative;padding:26px 24px;border-radius:var(--radius);
+  border:1px solid var(--line);background:var(--card);
+  transition:all .45s var(--ease);overflow:hidden;
+}
+.step::before{
+  content:attr(data-n);position:absolute;top:-14px;right:14px;
+  font-size:3.6rem;font-weight:200;color:var(--gold);opacity:.11;letter-spacing:-3px;
+}
+.step:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-lift)}
+.step h3{margin:0 0 10px;font-size:1rem;font-weight:500;color:var(--text-strong)}
+.step p{margin:0;font-size:.87rem;color:var(--muted);font-weight:300;line-height:1.78}
+
+/* ---- footer ---- */
+footer{
+  position:relative;margin-top:clamp(30px,5vw,60px);
+  padding:clamp(46px,6vw,74px) 0 40px;
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,transparent,var(--chip));
+}
+.foot-quote{
+  max-width:720px;margin:0 auto clamp(30px,4vw,44px);text-align:center;
+}
+.foot-quote .dev{
+  margin:0 0 14px;font-family:var(--font-sa);font-size:clamp(1.1rem,2.4vw,1.5rem);
+  color:var(--gold);line-height:1.8;
+}
+.foot-quote p{font-size:.9rem;color:var(--muted);font-weight:300;margin:0}
+.foot-bottom{
+  display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;
+  padding-top:26px;border-top:1px solid var(--line);
+  font-size:.74rem;color:var(--muted);line-height:1.9;
+}
+.foot-bottom .cols{display:flex;flex-wrap:wrap;gap:26px}
+.foot-bottom strong{color:var(--text);font-weight:500}
+.foot-om{
+  display:flex;align-items:center;gap:10px;font-family:var(--font-sa);color:var(--gold);
+  font-size:1.05rem;
+}
+.foot-om span{
+  display:grid;place-items:center;width:32px;height:32px;border-radius:50%;
+  border:1px solid var(--line-strong);
+}
+
+/* ============================================================
+   6. MODAL
+   ============================================================ */
+.modal{
+  position:fixed;inset:0;z-index:300;display:none;
+  align-items:center;justify-content:center;padding:20px;
+}
+.modal.open{display:flex;animation:fadeIn .3s var(--ease)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-bg{position:absolute;inset:0;background:rgba(4,3,10,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.modal-card{
+  position:relative;width:min(520px,100%);max-height:86vh;overflow-y:auto;
+  padding:clamp(26px,4vw,38px);
+  border-radius:calc(var(--radius) + 6px);
+  border:1px solid var(--line-strong);
+  background:linear-gradient(165deg,var(--bg-3),var(--bg-2));
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.9);
+  animation:pop .42s var(--ease);
+}
+@keyframes pop{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);
+  transition:all .3s var(--ease);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--line-strong);transform:rotate(90deg)}
+.modal-num{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.modal-glyph{
+  margin:10px 0 2px;font-family:var(--font-sa);font-size:clamp(2.6rem,9vw,3.6rem);
+  line-height:1.3;color:var(--gold);
+}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .modal-glyph{
+    background:linear-gradient(120deg,var(--gold-2),var(--gold),var(--saffron));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+}
+.modal-rom{font-size:.8rem;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted)}
+.modal-attr{margin:18px 0 4px;font-size:1.1rem;font-weight:500;color:var(--text-strong)}
+.modal-body{margin:10px 0 0;font-size:.92rem;color:var(--muted);font-weight:300;line-height:1.8}
+.modal-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+}
+.tag{
+  padding:6px 13px;border-radius:999px;font-size:.72rem;
+  border:1px solid var(--line);background:var(--chip);color:var(--gold);
+  letter-spacing:.3px;
+}
+.tag b{font-weight:500;color:var(--text);margin-left:5px}
+
+/* ============================================================
+   7. REVEAL + RESPONSIVE
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* no JavaScript: nothing may hide */
+html.no-js .reveal{opacity:1;transform:none}
+html.no-js .acc-b{max-height:none}
+html.no-js .acc-h{cursor:default}
+html.no-js .acc .chev{display:none}
+
+@media (max-width:980px){
+  .overview-grid{grid-template-columns:1fr}
+  .sci-grid{grid-template-columns:1fr}
+  .nav{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;gap:2px;padding:14px 22px 20px;
+    background:var(--bg-2);border-bottom:1px solid var(--line);
+    display:none;
+  }
+  .nav.open{display:flex;animation:pop .3s var(--ease)}
+  .nav a{padding:12px 14px;border-radius:10px;font-size:.92rem}
+  .controls{margin-left:auto}
+  .menu-btn{display:grid}
+  .head-in{position:relative;flex-wrap:nowrap}
+}
+@media (max-width:640px){
+  .brand-txt small{display:none}
+  .lang-btn{padding:6px 8px;font-size:.7rem}
+  .head-in{gap:10px}
+  .om{width:38px;height:38px;font-size:1.2rem}
+  .facts{grid-template-columns:1fr 1fr}
+  .aksha-grid{grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:9px}
+  .aksha{min-height:116px;padding:18px 6px 12px}
+  .aksha .glyph{font-size:1.42rem}
+  .aksha .attr{font-size:.68rem}
+  .acc-b p{padding-left:2px}
+  .foot-bottom{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:560px){
+  .brand-txt{display:none}
+  .head-in{gap:8px}
+}
+@media (max-width:400px){
+  .lang-btn{padding:5px 6px;font-size:.64rem}
+  .lang{gap:0;padding:2px}
+  .controls{gap:6px}
+  .icon-btn{width:34px;height:34px}
+  .menu-btn{width:34px}
+  .wrap{padding-inline:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-head" id="siteHead">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Gayatri Mantra — home">
+      <span class="om" aria-hidden="true">ॐ</span>
+      <span class="brand-txt">
+        <strong data-i18n="brand">Gayatri Mantra</strong>
+        <small data-i18n="brandSub">Rigveda 3.62.10</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#overview" data-i18n="navOverview">Overview</a>
+      <a href="#science" data-i18n="navScience">Science of Sound</a>
+      <a href="#aksharas" data-i18n="navAksharas">24 Syllables</a>
+      <a href="#japa" data-i18n="navJapa">Japa</a>
+      <a href="#practice" data-i18n="navPractice">Practice</a>
+    </nav>
+
+    <div class="controls">
+      <div class="lang" role="group" aria-label="Choose language">
+        <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="hi" aria-pressed="false">हिन्दी</button>
+        <button class="lang-btn" data-lang="mr" aria-pressed="false">मराठी</button>
+        <button class="lang-btn" data-lang="sa" aria-pressed="false">संस्कृतम्</button>
+      </div>
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Switch theme" title="Dark / Light">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="aura" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow" data-i18n="heroEyebrow">Rigveda · Mandala 3 · Sukta 62 · Mantra 10</p>
+    <h1 data-i18n-html="heroTitle">The Gayatri Mantra: <span class="accent">The Universal Prayer</span> of Light and Wisdom</h1>
+    <p class="lede" data-i18n="heroLede">Twenty-four syllables, one prayer — that the light which lights the sun should also light our minds.</p>
+
+    <div class="mantra-card">
+      <p class="mantra dev">ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्</p>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="rom">oṁ bhūr bhuvaḥ svaḥ · tat savitur vareṇyaṁ · bhargo devasya dhīmahi · dhiyo yo naḥ pracodayāt</p>
+      <div class="hero-actions">
+        <button class="btn primary" id="audioBtn" aria-pressed="false">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="listen">Listen to the sacred tone</span>
+        </button>
+        <a class="btn ghost" href="#overview" data-i18n="beginScroll">Begin the journey</a>
+      </div>
+      <p class="hint" data-i18n="audioHint">A gentle ambient drone, synthesised live in your browser — no audio files.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="ovKicker">The Origin</p>
+      <h2 data-i18n-html="ovTitle">What the mantra <strong>actually is</strong></h2>
+      <p data-i18n="ovSub">The oldest prayer of the Vedic world, and still the simplest.</p>
+    </div>
+
+    <div class="overview-grid">
+      <div class="prose reveal">
+        <p class="lead" data-i18n="ovP1">The Gayatri Mantra is the most revered verse of the Vedic tradition. It appears in the Rigveda, Mandala 3, Sukta 62, Mantra 10, and tradition attributes its vision to the sage Vishvamitra.</p>
+        <p data-i18n="ovP2">It is composed in the Gayatri metre, which holds exactly twenty-four syllables — the metre gives the mantra its name. Its presiding deity is Savitr, the light of the rising sun that awakens understanding.</p>
+        <p data-i18n="ovP3">It asks for nothing material. No wealth, no protection, no victory — only that our intelligence be illumined and impelled toward what is true.</p>
+      </div>
+      <div class="facts reveal">
+        <div class="fact"><b>3.62.10</b><span data-i18n="factSource">Rigveda source</span></div>
+        <div class="fact"><b>24</b><span data-i18n="factSyll">Syllables</span></div>
+        <div class="fact"><b>3</b><span data-i18n="factVyahriti">Vyāhṛtis</span></div>
+        <div class="fact"><b>Savitṛ</b><span data-i18n="factDeity">Presiding deity</span></div>
+      </div>
+    </div>
+
+    <div class="voices reveal">
+      <div class="voices-head">
+        <h3 data-i18n="voicesTitle">Four voices of one meaning</h3>
+        <span data-i18n="voicesSub">The same prayer, said four ways</span>
+      </div>
+      <div class="voices-grid" id="voicesGrid">
+      <article class="voice" data-active="true">
+        <p class="vl"><i></i>English</p>
+        <p class="">Om. We meditate upon the radiant splendour of Savitr, the divine sun. May that light awaken and impel our understanding.</p>
+      </article>
+      <article class="voice" data-active="false">
+        <p class="vl"><i></i>हिन्दी</p>
+        <p class="dev">ॐ। हम देवता सविता के उस वरेण्य दिव्य तेज का ध्यान करते हैं। वह प्रकाश हमारी बुद्धि को प्रकाशित और प्रेरित करे।</p>
+      </article>
+      <article class="voice" data-active="false">
+        <p class="vl"><i></i>मराठी</p>
+        <p class="dev">ॐ। आम्ही देव सवित्याच्या वरेण्य दिव्य तेजाचे ध्यान करतो. तो प्रकाश आमची बुद्धी प्रकाशित व प्रेरित करो.</p>
+      </article>
+      <article class="voice" data-active="false">
+        <p class="vl"><i></i>संस्कृतम्</p>
+        <p class="dev">ॐ। तत् सवितुः देवस्य वरेण्यं भर्गः धीमहि; सः प्रकाशः नः धियः प्रचोदयात्।</p>
+      </article>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCIENCE ================= -->
+<section id="science">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="sciKicker">The Science of Vibration</p>
+      <h2 data-i18n-html="sciTitle">Impact on <strong>humans</strong> and on <strong>nature</strong></h2>
+      <p data-i18n="sciSub">What the tradition says, and what the research can actually support — kept honestly side by side.</p>
+    </div>
+
+    <div class="sci-grid">
+      <div class="sci-col reveal">
+        <h3><span class="glyph" aria-hidden="true">आ</span><span data-i18n="sciHumanH">On humans</span></h3>
+        <p class="sub" data-i18n="sciHumanSub">Body, breath, attention</p>
+        <div id="humanList">
+      <div class="acc open" data-acc>
+        <button class="acc-h" aria-expanded="true">
+          <span class="num">01</span>
+          <span class="t">Attention and mental clarity</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>Twenty-four syllables in a fixed order, repeated slowly, give the mind one object to hold. That is the classic training of attention — the same principle behind any focused practice, whether a mantra or a breath count.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">02</span>
+          <span class="t">Calming the autonomic nervous system</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>Chanting lengthens the out-breath, and slow-paced breathing is among the better-studied ways to shift the body toward parasympathetic, rest-and-digest activity. Research on slow breathing near six breaths a minute reports lower arousal and steadier heart-rate variability.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">03</span>
+          <span class="t">The subtle energy centres</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>In the traditional map the sound is felt along the palate, throat, heart and brow — the regions of the viśuddhi, anāhata and ājñā centres. This claim is experiential rather than measurable: practitioners describe the mantra as light moving upward through the body.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">04</span>
+          <span class="t">Cognition through precise phonetics</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>Sanskrit rests on a systematic inventory of sounds, and the Gayatri's syllables are ordered so that tongue, palate and lips travel deliberately. Recitation couples rhythm, breath and articulation — the combination verbal-memory research finds easiest to retain.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">05</span>
+          <span class="t">The three vyāhṛtis and the silence</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>The mantra opens with bhūr, bhuvaḥ, svaḥ — earth, mid-space, heaven — and ends in silence. The structure is itself a meditation: from the grossest register of sound to the finest, and then to no sound at all.</p></div>
+      </div>
+      </div>
+      </div>
+      <div class="sci-col reveal">
+        <h3><span class="glyph" aria-hidden="true">प्र</span><span data-i18n="sciNatureH">On nature &amp; environment</span></h3>
+        <p class="sub" data-i18n="sciNatureSub">Resonance, cymatics, community</p>
+        <div id="natureList">
+      <div class="acc open" data-acc>
+        <button class="acc-h" aria-expanded="true">
+          <span class="num">01</span>
+          <span class="t">Śabda-Brahman: sound as the world's fabric</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>Vedic thought holds that sound is not a description of reality but its substance. In that view a mantra is not a request sent outward — it is a tuning of the instrument that receives.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">02</span>
+          <span class="t">Cymatics: sound made visible</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>When a plate covered in sand or water is vibrated at a fixed frequency, the grains settle into ordered patterns. Ernst Chladni drew them in the 1780s; Hans Jenny filmed them in the twentieth century. The demonstration is real. The leap from patterns in a dish to the effect of chanting on a landscape is not one science has made.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">03</span>
+          <span class="t">Water and plants</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>Photographs of water crystals responding to words are widely shared, but the method has not survived scrutiny and mainstream science does not accept them as evidence. Studies of sound and vibration on plant growth are mixed — some show small effects, many show none.</p></div>
+      </div>
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">04</span>
+          <span class="t">Collective chanting and entrainment</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>When a group chants together, breath and voice synchronise — a well-documented social entrainment. Practitioners describe the result as a shared field of calm. At minimum, it is a reliable way to make slow breathing easy to sustain.</p></div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="evidence reveal">
+      <b data-i18n="evTitle">A note on evidence.</b>
+      <span data-i18n="evBody">Chanting is well studied as a practice of slow breathing and sustained attention, and those effects are real and repeatable. Claims that sound restructures water, accelerates plant growth or harmonises weather are traditional or preliminary; mainstream science does not treat them as established. This page keeps the two side by side and does not present the second as proof.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AKSHARAS ================= -->
+<section id="aksharas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="akKicker">Akshara by Akshara</p>
+      <h2 data-i18n-html="akTitle">The <strong>twenty-four syllables</strong></h2>
+      <p data-i18n="akSub">The Gayatri metre is built of twenty-four aksharas. Each carries a seed sound, a quality of consciousness, and a place in the body where practitioners feel it land.</p>
+    </div>
+
+    <div class="aksha-bar reveal">
+      <span class="hint-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 11.5V5.6a1.6 1.6 0 0 1 3.2 0v5M12.2 10.4V4.6a1.6 1.6 0 0 1 3.2 0v6.2M15.4 11V6.4a1.6 1.6 0 0 1 3.2 0V15a6 6 0 0 1-6 6h-1.2a5.6 5.6 0 0 1-4.4-2.2L4 14.6a1.6 1.6 0 0 1 2.4-2.1L9 15"/></svg>
+        <span data-i18n="akHint">Tap any syllable to open its seed sound</span>
+      </span>
+      <span class="counter"><b>24</b> <span data-i18n="akCount">aksharas</span></span>
+    </div>
+
+    <div class="aksha-grid" id="akshaGrid">
+      <button class="aksha" data-i="0" aria-label="tat — Thatness">
+        <span class="n">01</span>
+        <span class="glyph dev">तत्</span>
+        <span class="rom">tat</span>
+        <span class="attr">Thatness</span>
+        <span class="ins">The unattached “That” — the Reality beyond every name and form. The mantra begins by pointing away from the describable.</span>
+      </button>
+      <button class="aksha" data-i="1" aria-label="sa — Existence">
+        <span class="n">02</span>
+        <span class="glyph dev">स</span>
+        <span class="rom">sa</span>
+        <span class="attr">Existence</span>
+        <span class="ins">The seed of sat — being itself. A syllable that simply is, before it means anything.</span>
+      </button>
+      <button class="aksha" data-i="2" aria-label="vi — Discernment">
+        <span class="n">03</span>
+        <span class="glyph dev">वि</span>
+        <span class="rom">vi</span>
+        <span class="attr">Discernment</span>
+        <span class="ins">Separation, discrimination — the intelligence that tells the real from the merely convincing.</span>
+      </button>
+      <button class="aksha" data-i="3" aria-label="tu — Impulse">
+        <span class="n">04</span>
+        <span class="glyph dev">तु</span>
+        <span class="rom">tu</span>
+        <span class="attr">Impulse</span>
+        <span class="ins">The push that sets things moving — creation as a verb rather than a finished thing.</span>
+      </button>
+      <button class="aksha" data-i="4" aria-label="rva — All-pervading">
+        <span class="n">05</span>
+        <span class="glyph dev">र्व</span>
+        <span class="rom">rva</span>
+        <span class="attr">All-pervading</span>
+        <span class="ins">From the root uru, “wide”. Expansion without edge — the spaciousness in which everything appears.</span>
+      </button>
+      <button class="aksha" data-i="5" aria-label="re — Radiance">
+        <span class="n">06</span>
+        <span class="glyph dev">रे</span>
+        <span class="rom">re</span>
+        <span class="attr">Radiance</span>
+        <span class="ins">The ray — a single beam of knowledge striking the dark. Cognate with the fire of insight.</span>
+      </button>
+      <button class="aksha" data-i="6" aria-label="ṇyaṁ — Illumination">
+        <span class="n">07</span>
+        <span class="glyph dev">ण्यं</span>
+        <span class="rom">ṇyaṁ</span>
+        <span class="attr">Illumination</span>
+        <span class="ins">The nasal hum at the end carries the sound upward into the crown — light experienced as resonance rather than as sight.</span>
+      </button>
+      <button class="aksha" data-i="7" aria-label="bha — Lustre">
+        <span class="n">08</span>
+        <span class="glyph dev">भ</span>
+        <span class="rom">bha</span>
+        <span class="attr">Lustre</span>
+        <span class="ins">The shine that removes darkness. Bharga — the light that does not merely illuminate but dissolves.</span>
+      </button>
+      <button class="aksha" data-i="8" aria-label="rgo — Splendour">
+        <span class="n">09</span>
+        <span class="glyph dev">र्गो</span>
+        <span class="rom">rgo</span>
+        <span class="attr">Splendour</span>
+        <span class="ins">The beauty of the sun of consciousness — the reason the mantra calls this light vareṇya, “worthy of choosing”.</span>
+      </button>
+      <button class="aksha" data-i="9" aria-label="de — The divine">
+        <span class="n">10</span>
+        <span class="glyph dev">दे</span>
+        <span class="rom">de</span>
+        <span class="attr">The divine</span>
+        <span class="ins">From div, “to shine”. A deva is not a ruler but a giver of light — the root of the English “divine”.</span>
+      </button>
+      <button class="aksha" data-i="10" aria-label="va — Movement">
+        <span class="n">11</span>
+        <span class="glyph dev">व</span>
+        <span class="rom">va</span>
+        <span class="attr">Movement</span>
+        <span class="ins">Wind and breath — the syllable that carries sound at all. Nothing is spoken without it.</span>
+      </button>
+      <button class="aksha" data-i="11" aria-label="sya — Belonging to">
+        <span class="n">12</span>
+        <span class="glyph dev">स्य</span>
+        <span class="rom">sya</span>
+        <span class="attr">Belonging to</span>
+        <span class="ins">A genitive — the light is not separate from us; it belongs to the divine and is offered to us.</span>
+      </button>
+      <button class="aksha" data-i="12" aria-label="dhī — Meditative wisdom">
+        <span class="n">13</span>
+        <span class="glyph dev">धी</span>
+        <span class="rom">dhī</span>
+        <span class="attr">Meditative wisdom</span>
+        <span class="ins">Not cleverness but the deeper faculty that sees — dhī, the intelligence that grows out of stillness.</span>
+      </button>
+      <button class="aksha" data-i="13" aria-label="ma — Mind">
+        <span class="n">14</span>
+        <span class="glyph dev">म</span>
+        <span class="rom">ma</span>
+        <span class="attr">Mind</span>
+        <span class="ins">The receiving mind, and the mother-sound ma — the hum of the closed mouth, the most inward of consonants.</span>
+      </button>
+      <button class="aksha" data-i="14" aria-label="hi — Indeed">
+        <span class="n">15</span>
+        <span class="glyph dev">हि</span>
+        <span class="rom">hi</span>
+        <span class="attr">Indeed</span>
+        <span class="ins">A particle of certainty. The prayer does not wish — it asserts, and in asserting, commits.</span>
+      </button>
+      <button class="aksha" data-i="15" aria-label="dhi — Contemplation">
+        <span class="n">16</span>
+        <span class="glyph dev">धि</span>
+        <span class="rom">dhi</span>
+        <span class="attr">Contemplation</span>
+        <span class="ins">From the same root as dhī — to hold. The light is not merely seen once; it is held, carried, kept.</span>
+      </button>
+      <button class="aksha" data-i="16" aria-label="yo — Union">
+        <span class="n">17</span>
+        <span class="glyph dev">यो</span>
+        <span class="rom">yo</span>
+        <span class="attr">Union</span>
+        <span class="ins">The syllable of yoking — the same root that gives yoga. Intelligence joined back to its source.</span>
+      </button>
+      <button class="aksha" data-i="17" aria-label="yo — Surge">
+        <span class="n">18</span>
+        <span class="glyph dev">यो</span>
+        <span class="rom">yo</span>
+        <span class="attr">Surge</span>
+        <span class="ins">The second yo — the repeat is deliberate. Enthusiasm rising again, not a stutter in the metre.</span>
+      </button>
+      <button class="aksha" data-i="18" aria-label="naḥ — Our — not mine">
+        <span class="n">19</span>
+        <span class="glyph dev">नः</span>
+        <span class="rom">naḥ</span>
+        <span class="attr">Our — not mine</span>
+        <span class="ins">The mantra never says “my”. It is plural by design: the light is asked for the whole community, never for oneself alone.</span>
+      </button>
+      <button class="aksha" data-i="19" aria-label="pra — Forward">
+        <span class="n">20</span>
+        <span class="glyph dev">प्र</span>
+        <span class="rom">pra</span>
+        <span class="attr">Forward</span>
+        <span class="ins">The prefix of forward motion — pro-. Nothing here asks to be left as it is.</span>
+      </button>
+      <button class="aksha" data-i="20" aria-label="cho — Awakening">
+        <span class="n">21</span>
+        <span class="glyph dev">चो</span>
+        <span class="rom">cho</span>
+        <span class="attr">Awakening</span>
+        <span class="ins">From chud, “to impel”. The light does not merely shine on us — it prods, unsettles, sets us in motion.</span>
+      </button>
+      <button class="aksha" data-i="21" aria-label="da — Giving">
+        <span class="n">22</span>
+        <span class="glyph dev">द</span>
+        <span class="rom">da</span>
+        <span class="attr">Giving</span>
+        <span class="ins">The syllable of the gift. What is asked for is given — da is also the root of dāna, generosity.</span>
+      </button>
+      <button class="aksha" data-i="22" aria-label="yā — Going">
+        <span class="n">23</span>
+        <span class="glyph dev">या</span>
+        <span class="rom">yā</span>
+        <span class="attr">Going</span>
+        <span class="ins">The journey itself — the long vowel yā stretches the syllable, as if the movement needed room.</span>
+      </button>
+      <button class="aksha" data-i="23" aria-label="t — Stillness">
+        <span class="n">24</span>
+        <span class="glyph dev">त्</span>
+        <span class="rom">t</span>
+        <span class="attr">Stillness</span>
+        <span class="ins">A bare consonant with no vowel — the mantra ends by falling into silence. The last syllable is the absence of sound.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JAPA COUNTER ================= -->
+<section id="japa">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="japaKicker">Japa Mala</p>
+      <h2 data-i18n-html="japaTitle">Count your <strong>108</strong></h2>
+      <p data-i18n="japaSub">One mala is 108 repetitions. Tap the circle — or press space — for each repetition, and let the counting fall away from the mind.</p>
+    </div>
+
+    <div class="japa-card reveal" id="japaCard">
+      <div class="japa-stats">
+        <div><b id="japaMalas">0</b><span data-i18n="japaMalas">malas complete</span></div>
+        <div><b id="japaTotal">0</b><span data-i18n="japaTotal">total japa</span></div>
+      </div>
+
+      <button class="japa-btn" id="japaBtn" data-i18n-aria="japaAria" aria-label="Count one repetition">
+        <svg class="japa-ring" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <linearGradient id="japaGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop class="s1" offset="0%"/>
+              <stop class="s2" offset="55%"/>
+              <stop class="s3" offset="100%"/>
+            </linearGradient>
+          </defs>
+          <circle class="track" cx="60" cy="60" r="54"/>
+          <circle class="prog" id="japaProg" cx="60" cy="60" r="54"/>
+        </svg>
+        <span class="japa-inner">
+          <span class="japa-num" id="japaNum" aria-live="polite">0</span>
+          <span class="japa-unit" data-i18n="japaOf108">of 108</span>
+        </span>
+      </button>
+
+      <p class="japa-toast" id="japaToast" role="status" aria-live="polite"></p>
+
+      <div class="japa-actions">
+        <button class="btn ghost small" id="japaReset" data-i18n="japaReset">Reset</button>
+        <button class="btn ghost small" id="japaSound" aria-pressed="true" data-i18n-aria="japaSoundAria" aria-label="Toggle the soft tick">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.2L12 5.4v13.2L7.2 14.5H4z"/><path d="M16.4 8.6a4.6 4.6 0 0 1 0 6.8M18.9 6.2a8 8 0 0 1 0 11.6"/></svg>
+          <span data-i18n="japaSound">Soft tick</span>
+        </button>
+      </div>
+      <p class="hint" data-i18n="japaHint">Your count is kept on this device, so you can close the page and continue tomorrow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRACTICE ================= -->
+<section id="practice">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker" data-i18n="prKicker">Daily Practice</p>
+      <h2 data-i18n-html="prTitle">Three minutes, <strong>every morning</strong></h2>
+      <p data-i18n="prSub">The mantra does not need a special room or a special hour — only a straight spine and a little patience.</p>
+    </div>
+    <div class="practice-grid" id="practiceGrid">
+      <article class="step" data-n="01">
+        <h3>Sit, and steady the breath</h3>
+        <p>Sit comfortably with the spine tall and the shoulders loose. Let the breath settle into a slow, even rhythm before you say anything at all.</p>
+      </article>
+      <article class="step" data-n="02">
+        <h3>Chant three times, slowly</h3>
+        <p>Begin with the three vyāhṛtis — bhūr, bhuvaḥ, svaḥ — then the mantra itself, letting each of the twenty-four syllables land rather than rush.</p>
+      </article>
+      <article class="step" data-n="03">
+        <h3>Rest in the silence</h3>
+        <p>After the last syllable, stay still for a few breaths. The silence is not the gap between repetitions — it is part of the practice.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-quote reveal">
+      <p class="dev">धियो यो नः प्रचोदयात्</p>
+      <p data-i18n="footQuote">May that light impel our understanding — not once, but every day of our lives.</p>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-om"><span aria-hidden="true">ॐ</span><span data-i18n="footName">Gayatri Mantra</span></div>
+      <div class="cols">
+        <span><strong data-i18n="footSourceL">Source</strong><br><span data-i18n="footSource">Rigveda 3.62.10 · Gāyatrī metre · seer Viśvāmitra</span></span>
+        <span><strong data-i18n="footCreditL">Credits</strong><br><span data-i18n="footCredit">Original design &amp; code, released free for reuse (CC0). Type: Poppins, Noto Sans Devanagari, Tiro Devanagari Sanskrit.</span></span>
+        <span><strong data-i18n="footNoteL">Note</strong><br><span data-i18n="footNote">No audio files are bundled; the tone is generated in the browser.</span></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING JAPA BUTTON ================= -->
+<button class="japa-fab hide" id="japaFab" data-i18n-aria="japaAria" aria-label="Count one repetition" title="Count one japa">
+  <svg class="japa-fab-ring" viewBox="0 0 120 120" aria-hidden="true">
+    <defs>
+      <linearGradient id="fabGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop class="s1" offset="0%"/>
+        <stop class="s2" offset="55%"/>
+        <stop class="s3" offset="100%"/>
+      </linearGradient>
+    </defs>
+    <circle class="track" cx="60" cy="60" r="54"/>
+    <circle class="prog" id="fabProg" cx="60" cy="60" r="54"/>
+  </svg>
+  <span class="japa-fab-inner">
+    <span class="japa-fab-om" aria-hidden="true">ॐ</span>
+    <span class="japa-fab-num" id="fabNum">0</span>
+  </span>
+</button>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mAttr" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card" role="document">
+    <button class="modal-close" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <p class="modal-num" id="mNum"></p>
+    <p class="modal-glyph" id="mGlyph"></p>
+    <p class="modal-rom" id="mRom"></p>
+    <p class="modal-attr" id="mAttr"></p>
+    <p class="modal-body" id="mBody"></p>
+    <div class="modal-meta">
+      <span class="tag"><span data-i18n="mBeej">Seed sound</span><b id="mBeej"></b></span>
+      <span class="tag"><span data-i18n="mPlace">Felt at</span><b id="mPlace"></b></span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONTENT — all four languages live here.
+   Add a language by adding a key to I18N and a button in .lang
+   ============================================================ */
+const I18N = {
+  en: {
+    brand:"Gayatri Mantra", brandSub:"Rigveda 3.62.10",
+    navOverview:"Overview", navScience:"Science of Sound", navAksharas:"24 Syllables", navJapa:"Japa", navPractice:"Practice",
+    japaKicker:"Japa Mala", japaTitle:'Count your <strong>108</strong>',
+    japaSub:"One mala is 108 repetitions. Tap the circle — or press space — for each repetition, and let the counting fall away from the mind.",
+    japaMalas:"malas complete", japaTotal:"total japa", japaOf108:"of 108",
+    japaReset:"Reset", japaSound:"Soft tick",
+    japaAria:"Count one repetition", japaSoundAria:"Toggle the soft tick",
+    japaHint:"Your count is kept on this device, so you can close the page and continue tomorrow.",
+    japaDone:"One mala complete — 108", japaResetDone:"Count cleared",
+    heroEyebrow:"Rigveda · Mandala 3 · Sukta 62 · Mantra 10",
+    heroTitle:'The Gayatri Mantra: <span class="accent">The Universal Prayer</span> of Light and Wisdom',
+    heroLede:"Twenty-four syllables, one prayer — that the light which lights the sun should also light our minds. Explore its origin, its sound, its science and its silence.",
+    listen:"Listen to the sacred tone", beginScroll:"Begin the journey",
+    audioHint:"A gentle ambient drone, synthesised live in your browser — no audio files.",
+    ovKicker:"The Origin",
+    ovTitle:'What the mantra <strong>actually is</strong>',
+    ovSub:"The oldest prayer of the Vedic world, and still the simplest.",
+    ovP1:"The Gayatri Mantra is the most revered verse of the Vedic tradition. It appears in the Rigveda, Mandala 3, Sukta 62, Mantra 10, and tradition attributes its vision to the sage Vishvamitra.",
+    ovP2:"It is composed in the Gayatri metre, which holds exactly twenty-four syllables — the metre gives the mantra its name. Its presiding deity is Savitr, the light of the rising sun that awakens understanding.",
+    ovP3:"It asks for nothing material. No wealth, no protection, no victory — only that our intelligence be illumined and impelled toward what is true.",
+    factSource:"Rigveda source", factSyll:"Syllables", factVyahriti:"Vyāhṛtis", factDeity:"Presiding deity",
+    voicesTitle:"Four voices of one meaning", voicesSub:"The same prayer, said four ways",
+    sciKicker:"The Science of Vibration",
+    sciTitle:'Impact on <strong>humans</strong> and on <strong>nature</strong>',
+    sciSub:"What the tradition says, and what the research can actually support — kept honestly side by side.",
+    sciHumanH:"On humans", sciHumanSub:"Body, breath, attention",
+    sciNatureH:"On nature & environment", sciNatureSub:"Resonance, cymatics, community",
+    evTitle:"A note on evidence.",
+    evBody:"Chanting is well studied as a practice of slow breathing and sustained attention, and those effects are real and repeatable. Claims that sound restructures water, accelerates plant growth or harmonises weather are traditional or preliminary; mainstream science does not treat them as established. This page keeps the two side by side and does not present the second as proof.",
+    akKicker:"Akshara by Akshara",
+    akTitle:'The <strong>twenty-four syllables</strong>',
+    akSub:"The Gayatri metre is built of twenty-four aksharas. Each carries a seed sound, a quality of consciousness, and a place in the body where practitioners feel it land.",
+    akHint:"Tap any syllable to open its seed sound", akCount:"aksharas",
+    prKicker:"Daily Practice",
+    prTitle:'Three minutes, <strong>every morning</strong>',
+    prSub:"The mantra does not need a special room or a special hour — only a straight spine and a little patience.",
+    footQuote:"May that light impel our understanding — not once, but every day of our lives.",
+    footName:"Gayatri Mantra", footSourceL:"Source", footSource:"Rigveda 3.62.10 · Gāyatrī metre · seer Viśvāmitra",
+    footCreditL:"Credits", footCredit:"Original design & code, released free for reuse (CC0). Type: Poppins, Noto Sans Devanagari, Tiro Devanagari Sanskrit.",
+    footNoteL:"Note", footNote:"No audio files are bundled; the tone is generated in the browser.",
+    mBeej:"Seed sound", mPlace:"Felt at", of24:"of 24"
+  },
+  hi: {
+    brand:"गायत्री मंत्र", brandSub:"ऋग्वेद ३.६२.१०",
+    navOverview:"परिचय", navScience:"नाद का विज्ञान", navAksharas:"२४ अक्षर", navJapa:"जप", navPractice:"अभ्यास",
+    japaKicker:"जप माला", japaTitle:'अपने <strong>१०८</strong> गिनें',
+    japaSub:"एक माला में १०८ जप होते हैं। हर जप पर वृत्त को छुएँ — या स्पेस दबाएँ — और गिनती को मन से हट जाने दें।",
+    japaMalas:"मालाएँ पूर्ण", japaTotal:"कुल जप", japaOf108:"/ १०८",
+    japaReset:"रीसेट", japaSound:"मृदु ध्वनि",
+    japaAria:"एक जप गिनें", japaSoundAria:"मृदु ध्वनि चालू या बंद करें",
+    japaHint:"आपकी गिनती इसी उपकरण में सुरक्षित रहती है — पृष्ठ बंद करके कल फिर जारी रख सकते हैं।",
+    japaDone:"एक माला पूर्ण — १०८", japaResetDone:"गिनती शून्य की गई",
+    heroEyebrow:"ऋग्वेद · मंडल ३ · सूक्त ६२ · मंत्र १०",
+    heroTitle:'गायत्री मंत्र: प्रकाश और ज्ञान की <span class="accent">सार्वभौमिक प्रार्थना</span>',
+    heroLede:"चौबीस अक्षर, एक प्रार्थना — जो प्रकाश सूर्य को प्रकाशित करता है, वही हमारी बुद्धि को भी प्रकाशित करे। इसका उद्गम, इसका स्वर, इसका विज्ञान और इसका मौन — सब जानिए।",
+    listen:"पवित्र नाद सुनें", beginScroll:"यात्रा आरंभ करें",
+    audioHint:"एक सौम्य ध्वनि, आपके ब्राउज़र में ही उत्पन्न — कोई ऑडियो फ़ाइल नहीं।",
+    ovKicker:"उद्गम",
+    ovTitle:'यह मंत्र <strong>वास्तव में क्या है</strong>',
+    ovSub:"वैदिक जगत की सबसे प्राचीन प्रार्थना, और आज भी सबसे सरल।",
+    ovP1:"गायत्री मंत्र वैदिक परंपरा का सर्वाधिक पूज्य श्लोक है। यह ऋग्वेद के तृतीय मंडल, ६२वें सूक्त के दशम मंत्र में मिलता है, और परंपरा इसके द्रष्टा विश्वामित्र ऋषि को मानती है।",
+    ovP2:"यह गायत्री छंद में रचा गया है, जिसमें ठीक चौबीस अक्षर होते हैं — इसी छंद से मंत्र का नाम पड़ा। इसके देवता सविता हैं, उदीयमान सूर्य का वह प्रकाश जो बुद्धि को जगाता है।",
+    ovP3:"यह किसी भौतिक वस्तु की याचना नहीं करता। न धन, न रक्षा, न विजय — केवल यह कि हमारी बुद्धि प्रकाशित हो और सत्य की ओर प्रेरित हो।",
+    factSource:"ऋग्वेद स्रोत", factSyll:"अक्षर", factVyahriti:"व्याहृतियाँ", factDeity:"देवता",
+    voicesTitle:"एक अर्थ, चार वाणियाँ", voicesSub:"वही प्रार्थना, चार प्रकार से",
+    sciKicker:"कंपन का विज्ञान",
+    sciTitle:'<strong>मनुष्य</strong> पर और <strong>प्रकृति</strong> पर प्रभाव',
+    sciSub:"परंपरा क्या कहती है और शोध क्या सिद्ध कर पाता है — दोनों ईमानदारी से साथ रखे गए हैं।",
+    sciHumanH:"मनुष्य पर", sciHumanSub:"शरीर, श्वास, ध्यान",
+    sciNatureH:"प्रकृति और पर्यावरण पर", sciNatureSub:"अनुनाद, साइमेटिक्स, समुदाय",
+    evTitle:"प्रमाण पर एक टिप्पणी।",
+    evBody:"जप को धीमी श्वास और स्थिर ध्यान के अभ्यास के रूप में अच्छी तरह अध्ययन किया गया है, और वे प्रभाव वास्तविक तथा दोहराए जा सकने वाले हैं। ध्वनि से जल की संरचना बदलने, पौधों की वृद्धि बढ़ने या मौसम सामंजस्य पाने के दावे पारंपरिक या प्रारंभिक हैं; मुख्यधारा विज्ञान उन्हें सिद्ध नहीं मानता। यह पृष्ठ दोनों को साथ रखता है और दूसरे को प्रमाण नहीं बताता।",
+    akKicker:"अक्षर दर अक्षर",
+    akTitle:'<strong>चौबीस अक्षर</strong>',
+    akSub:"गायत्री छंद चौबीस अक्षरों से बना है। हर अक्षर में एक बीज स्वर, चेतना का एक गुण और शरीर में एक स्थान है जहाँ साधक उसे अनुभव करते हैं।",
+    akHint:"किसी भी अक्षर पर टैप करें और उसका बीज स्वर देखें", akCount:"अक्षर",
+    prKicker:"दैनिक अभ्यास",
+    prTitle:'तीन मिनट, <strong>हर सुबह</strong>',
+    prSub:"मंत्र को किसी विशेष कमरे या विशेष समय की आवश्यकता नहीं — केवल सीधी रीढ़ और थोड़ा धैर्य।",
+    footQuote:"वह प्रकाश हमारी बुद्धि को प्रेरित करे — एक बार नहीं, जीवन के हर दिन।",
+    footName:"गायत्री मंत्र", footSourceL:"स्रोत", footSource:"ऋग्वेद ३.६२.१० · गायत्री छंद · द्रष्टा विश्वामित्र",
+    footCreditL:"श्रेय", footCredit:"मौलिक डिज़ाइन और कोड, मुक्त पुनरुपयोग हेतु (CC0)। फ़ॉन्ट: Poppins, Noto Sans Devanagari, Tiro Devanagari Sanskrit.",
+    footNoteL:"सूचना", footNote:"कोई ऑडियो फ़ाइल संलग्न नहीं; ध्वनि ब्राउज़र में उत्पन्न होती है।",
+    mBeej:"बीज स्वर", mPlace:"अनुभूति स्थान", of24:"/ २४"
+  },
+  mr: {
+    brand:"गायत्री मंत्र", brandSub:"ऋग्वेद ३.६२.१०",
+    navOverview:"परिचय", navScience:"नादाचे विज्ञान", navAksharas:"२४ अक्षरे", navJapa:"जप", navPractice:"अभ्यास",
+    japaKicker:"जपमाळ", japaTitle:'तुमचे <strong>१०८</strong> मोजा',
+    japaSub:"एका माळेत १०८ जप असतात. प्रत्येक जपाला वर्तुळाला स्पर्श करा — किंवा स्पेस दाबा — आणि मोजणी मनातून बाजूला होऊ द्या.",
+    japaMalas:"माळा पूर्ण", japaTotal:"एकूण जप", japaOf108:"/ १०८",
+    japaReset:"रीसेट", japaSound:"मंद ध्वनी",
+    japaAria:"एक जप मोजा", japaSoundAria:"मंद ध्वनी चालू किंवा बंद करा",
+    japaHint:"तुमची मोजणी याच उपकरणात सुरक्षित राहते — पान बंद करून उद्या पुढे चालू ठेवा.",
+    japaDone:"एक माळ पूर्ण — १०८", japaResetDone:"मोजणी शून्य केली",
+    heroEyebrow:"ऋग्वेद · मंडल ३ · सूक्त ६२ · मंत्र १०",
+    heroTitle:'गायत्री मंत्र: प्रकाश आणि ज्ञानाची <span class="accent">सार्वत्रिक प्रार्थना</span>',
+    heroLede:"चोवीस अक्षरे, एकच प्रार्थना — जो प्रकाश सूर्याला उजळवतो, तोच आपली बुद्धीही उजळवो. याचा उगम, याचा नाद, याचे विज्ञान आणि याचे मौन — सर्व जाणून घ्या.",
+    listen:"पवित्र नाद ऐका", beginScroll:"प्रवास सुरू करा",
+    audioHint:"एक सौम्य ध्वनी, तुमच्याच ब्राउझरमध्ये तयार — कोणतीही ऑडिओ फाईल नाही.",
+    ovKicker:"उगम",
+    ovTitle:'हा मंत्र <strong>प्रत्यक्षात काय आहे</strong>',
+    ovSub:"वैदिक जगातील सर्वात प्राचीन प्रार्थना, आणि आजही सर्वात सोपी.",
+    ovP1:"गायत्री मंत्र हा वैदिक परंपरेतील सर्वात पूजनीय श्लोक आहे. तो ऋग्वेदाच्या तृतीय मंडलातील ६२ व्या सूक्ताचा दहावा मंत्र आहे, आणि परंपरा त्याचे द्रष्टे विश्वामित्र ऋषी मानते.",
+    ovP2:"तो गायत्री छंदात रचला आहे, ज्यात नेमकी चोवीस अक्षरे आहेत — याच छंदावरून मंत्राला नाव मिळाले. त्याचे दैवत सविता आहे — उदयोन्मुख सूर्याचा प्रकाश, जो बुद्धी जागवतो.",
+    ovP3:"तो कोणतीही भौतिक वस्तू मागत नाही. धन नाही, संरक्षण नाही, विजय नाही — फक्त आपली बुद्धी प्रकाशमान व्हावी आणि सत्याकडे प्रेरित व्हावी.",
+    factSource:"ऋग्वेद स्रोत", factSyll:"अक्षरे", factVyahriti:"व्याहृती", factDeity:"दैवत",
+    voicesTitle:"एकच अर्थ, चार वाणी", voicesSub:"तीच प्रार्थना, चार प्रकारे",
+    sciKicker:"कंपनाचे विज्ञान",
+    sciTitle:'<strong>माणसावर</strong> आणि <strong>निसर्गावर</strong> होणारा परिणाम',
+    sciSub:"परंपरा काय सांगते आणि संशोधन काय सिद्ध करू शकते — दोन्ही प्रामाणिकपणे शेजारी ठेवले आहेत.",
+    sciHumanH:"माणसावर", sciHumanSub:"शरीर, श्वास, लक्ष",
+    sciNatureH:"निसर्ग व पर्यावरणावर", sciNatureSub:"अनुनाद, सायमेटिक्स, समुदाय",
+    evTitle:"पुराव्याविषयी सूचना.",
+    evBody:"जपाचा संथ श्वास व स्थिर लक्ष यांचा अभ्यास म्हणून चांगला अभ्यास झाला आहे, आणि ते परिणाम खरे व पुनरावृत्तीय आहेत. ध्वनीमुळे पाण्याची रचना बदलते, वनस्पतींची वाढ वाढते किंवा हवामान सुसंगत होते हे दावे पारंपरिक किंवा प्राथमिक आहेत; मुख्य प्रवाहातील विज्ञान ते सिद्ध मानत नाही. हे पान दोन्ही शेजारी ठेवते आणि दुसऱ्याला पुरावा म्हणत नाही.",
+    akKicker:"अक्षरागणिक",
+    akTitle:'<strong>चोवीस अक्षरे</strong>',
+    akSub:"गायत्री छंद चोवीस अक्षरांनी बनला आहे. प्रत्येक अक्षरात एक बीजस्वर, चैतन्याचा एक गुण आणि शरीरात एक जागा आहे जिथे साधक तो अनुभवतात.",
+    akHint:"कोणत्याही अक्षरावर टॅप करा आणि त्याचा बीजस्वर पहा", akCount:"अक्षरे",
+    prKicker:"दैनंदिन अभ्यास",
+    prTitle:'तीन मिनिटे, <strong>दर सकाळी</strong>',
+    prSub:"मंत्राला विशेष खोली किंवा विशेष वेळ लागत नाही — फक्त सरळ पाठ आणि थोडा संयम.",
+    footQuote:"तो प्रकाश आपल्या बुद्धीला प्रेरित करो — एकदाच नाही, आयुष्याच्या प्रत्येक दिवशी.",
+    footName:"गायत्री मंत्र", footSourceL:"स्रोत", footSource:"ऋग्वेद ३.६२.१० · गायत्री छंद · द्रष्टे विश्वामित्र",
+    footCreditL:"श्रेय", footCredit:"मूळ डिझाइन व कोड, मुक्त पुनर्वापरासाठी (CC0). फॉन्ट: Poppins, Noto Sans Devanagari, Tiro Devanagari Sanskrit.",
+    footNoteL:"सूचना", footNote:"कोणतीही ऑडिओ फाईल जोडलेली नाही; ध्वनी ब्राउझरमध्ये तयार होतो.",
+    mBeej:"बीजस्वर", mPlace:"अनुभूतीची जागा", of24:"/ २४"
+  },
+  sa: {
+    brand:"गायत्रीमन्त्रः", brandSub:"ऋग्वेदः ३.६२.१०",
+    navOverview:"परिचयः", navScience:"नादविज्ञानम्", navAksharas:"चतुर्विंशत्यक्षराणि", navJapa:"जपः", navPractice:"अभ्यासः",
+    japaKicker:"जपमाला", japaTitle:'स्वीयान् <strong>१०८</strong> गणय',
+    japaSub:"एकस्यां मालायां १०८ जपाः भवन्ति। प्रतिजपं वृत्तं स्पृश — अथवा स्पेस्-कुञ्जिकां पीडय — गणना मनसः अपगच्छतु।",
+    japaMalas:"मालाः पूर्णाः", japaTotal:"समग्रजपाः", japaOf108:"/ १०८",
+    japaReset:"पुनःस्थापनम्", japaSound:"मृदुध्वनिः",
+    japaAria:"एकं जपं गणय", japaSoundAria:"मृदुध्वनिं चालय वा स्थगय",
+    japaHint:"तव गणना अस्मिन् एव यन्त्रे रक्ष्यते — पृष्ठं पिधाय श्वः पुनः आरभस्व।",
+    japaDone:"एका माला पूर्णा — १०८", japaResetDone:"गणना शून्यीकृता",
+    heroEyebrow:"ऋग्वेदः · तृतीयमण्डलम् · द्वाषष्टितमसूक्तम् · दशमो मन्त्रः",
+    heroTitle:'गायत्रीमन्त्रः — प्रकाशस्य प्रज्ञायाश्च <span class="accent">विश्वव्यापिनी प्रार्थना</span>',
+    heroLede:"चतुर्विंशतिरक्षराणि, एका प्रार्थना — यः प्रकाशः सूर्यं प्रकाशयति, स एवास्माकं धियं प्रकाशयतु। अस्य उद्गमं, नादं, विज्ञानं, मौनं च पश्यत।",
+    listen:"पवित्रं नादं शृणु", beginScroll:"यात्रां आरभस्व",
+    audioHint:"सौम्यः नादः तव ब्राउजर्-मध्ये एव निर्मितः — न किमपि ऑडियोसञ्चिका।",
+    ovKicker:"उद्गमः",
+    ovTitle:'कोऽयं मन्त्रः <strong>वस्तुतः</strong>',
+    ovSub:"वैदिकजगतः प्राचीनतमा प्रार्थना, अद्यापि सरलतमा।",
+    ovP1:"गायत्रीमन्त्रः वैदिकपरम्परायाः पूज्यतमः श्लोकः। स ऋग्वेदस्य तृतीयमण्डलस्य द्वाषष्टितमसूक्तस्य दशमो मन्त्रः; परम्परा विश्वामित्रं तस्य द्रष्टारं मन्यते।",
+    ovP2:"स गायत्रीच्छन्दसि निबद्धः, यत्र चतुर्विंशतिरक्षराणि सन्ति — तेनैव छन्दसा मन्त्रस्य नाम। तस्य देवता सविता — उद्यत्सूर्यस्य प्रकाशः, यो बुद्धिं बोधयति।",
+    ovP3:"स न किमपि भौतिकं याचते। न धनं, न रक्षां, न विजयम् — केवलम् अस्माकं धीः प्रकाशेत सत्यं प्रति प्रेर्येत च।",
+    factSource:"ऋग्वेदस्रोतः", factSyll:"अक्षराणि", factVyahriti:"व्याहृतयः", factDeity:"देवता",
+    voicesTitle:"एकोऽर्थः, चतस्रो वाचः", voicesSub:"सैव प्रार्थना, चतुर्धा",
+    sciKicker:"स्पन्दनस्य विज्ञानम्",
+    sciTitle:'<strong>मानवे</strong> <strong>प्रकृतौ</strong> च प्रभावः',
+    sciSub:"परम्परा किं वदति, संशोधनं किं साधयति — उभयं सत्यनिष्ठया सह स्थापितम्।",
+    sciHumanH:"मानवे", sciHumanSub:"देहः, श्वासः, ध्यानम्",
+    sciNatureH:"प्रकृतौ पर्यावरणे च", sciNatureSub:"अनुनादः, सायमेटिक्स्, समुदायः",
+    evTitle:"प्रमाणविषये सूचना।",
+    evBody:"मन्दश्वासध्यानाभ्यासरूपेण जपः सुष्ठु अध्ययनितः, तानि फलानि सत्यानि पुनरावर्तनीयानि च। ध्वनिना जलसंरचना परिवर्तते, वनस्पतिवृद्धिः वर्धते, ऋतवः संगच्छन्ते इति दावाः पारम्परिकाः प्राथमिकाः वा; मुख्यविज्ञानं तान् सिद्धान् न मन्यते। इदं पृष्ठं उभयं सह स्थापयति, द्वितीयं प्रमाणं न वदति।",
+    akKicker:"अक्षरशः",
+    akTitle:'<strong>चतुर्विंशतिरक्षराणि</strong>',
+    akSub:"गायत्रीच्छन्दः चतुर्विंशत्यक्षरैः निर्मितः। प्रत्येकस्मिन् अक्षरे एकः बीजस्वरः, चैतन्यस्य एको गुणः, देहे च एकः प्रदेशः विद्यते यत्र साधकाः तम् अनुभवन्ति।",
+    akHint:"कस्मिंश्चिदपि अक्षरे स्पृश, तस्य बीजस्वरं पश्य", akCount:"अक्षराणि",
+    prKicker:"दैनिकः अभ्यासः",
+    prTitle:'त्रीणि निमिषाणि, <strong>प्रत्युषसि</strong>',
+    prSub:"मन्त्राय न विशेषः कक्षः, न विशेषः कालः — केवलम् ऋजुः देहः, ईषत् धैर्यं च।",
+    footQuote:"सः प्रकाशः अस्माकं धियं प्रचोदयतु — न एकवारं, जीवनस्य प्रतिदिनम्।",
+    footName:"गायत्रीमन्त्रः", footSourceL:"स्रोतः", footSource:"ऋग्वेदः ३.६२.१० · गायत्रीच्छन्दः · द्रष्टा विश्वामित्रः",
+    footCreditL:"श्रेयः", footCredit:"मौलिकं विन्यासः कोडश्च, मुक्तपुनरुपयोगाय (CC0)। लिपिः: Poppins, Noto Sans Devanagari, Tiro Devanagari Sanskrit.",
+    footNoteL:"सूचना", footNote:"न कापि ऑडियोसञ्चिका योजिता; नादः ब्राउजरे निर्मीयते।",
+    mBeej:"बीजस्वरः", mPlace:"अनुभूतिस्थानम्", of24:"/ २४"
+  }
+};
+
+/* The four renderings of the mantra's meaning, always all visible */
+const VOICES = [
+  { code:"en", label:"English", script:"latin",
+    text:"Om. We meditate upon the radiant splendour of Savitr, the divine sun. May that light awaken and impel our understanding." },
+  { code:"hi", label:"हिन्दी", script:"dev",
+    text:"ॐ। हम देवता सविता के उस वरेण्य दिव्य तेज का ध्यान करते हैं। वह प्रकाश हमारी बुद्धि को प्रकाशित और प्रेरित करे।" },
+  { code:"mr", label:"मराठी", script:"dev",
+    text:"ॐ। आम्ही देव सवित्याच्या वरेण्य दिव्य तेजाचे ध्यान करतो. तो प्रकाश आमची बुद्धी प्रकाशित व प्रेरित करो." },
+  { code:"sa", label:"संस्कृतम्", script:"dev",
+    text:"ॐ। तत् सवितुः देवस्य वरेण्यं भर्गः धीमहि; सः प्रकाशः नः धियः प्रचोदयात्।" }
+];
+
+/* Where each syllable is traditionally felt */
+const PLACES = {
+  heart:{en:"Heart",hi:"हृदय",mr:"हृदय",sa:"हृदयम्"},
+  throat:{en:"Throat",hi:"कंठ",mr:"घसा",sa:"कण्ठः"},
+  palate:{en:"Palate",hi:"तालु",mr:"ताळू",sa:"तालु"},
+  brow:{en:"Brow",hi:"भ्रूमध्य",mr:"भ्रूमध्य",sa:"भ्रूमध्यम्"},
+  navel:{en:"Navel",hi:"नाभि",mr:"नाभी",sa:"नाभिः"},
+  crown:{en:"Crown",hi:"मूर्धा",mr:"मस्तक",sa:"मूर्धा"}
+};
+
+/* ============================================================
+   THE 24 AKSHARAS
+   d = Devanagari · r = roman · b = bīja (seed sound)
+   p = place key · a = attribute · i = insight
+   ============================================================ */
+const AKSHARAS = [
+ { d:"तत्", r:"tat", b:"taṁ", p:"heart",
+   a:{en:"Thatness",hi:"तत्त्व",mr:"तत्त्व",sa:"तत्त्वम्"},
+   i:{en:"The unattached “That” — the Reality beyond every name and form. The mantra begins by pointing away from the describable.",
+      hi:"अनासक्त “तत्” — हर नाम और रूप से परे वह सत्ता। मंत्र वर्णन-योग्य से परे की ओर संकेत करते हुए आरंभ होता है।",
+      mr:"अनासक्त “तत्” — प्रत्येक नाव व रूपाच्या पलीकडील ती सत्ता. मंत्र वर्णनातीताकडे निर्देश करत सुरू होतो.",
+      sa:"अनासक्तं “तत्” — सर्वनामरूपातीतं तत्। मन्त्रः वर्णनातीतं प्रति सूचयन् आरभते।"} },
+ { d:"स", r:"sa", b:"saṁ", p:"navel",
+   a:{en:"Existence",hi:"अस्तित्व",mr:"अस्तित्व",sa:"सत्ता"},
+   i:{en:"The seed of sat — being itself. A syllable that simply is, before it means anything.",
+      hi:"सत् का बीज — स्वयं अस्तित्व। एक अक्षर जो अर्थ देने से पहले केवल “है”।",
+      mr:"सत् चे बीज — अस्तित्व स्वतः. अर्थ येण्यापूर्वी केवळ “आहे” असणारे अक्षर.",
+      sa:"सच्छब्दस्य बीजम् — सत्ता स्वयम्। अर्थात् पूर्वम् अपि “अस्ति” इति शब्दः।"} },
+ { d:"वि", r:"vi", b:"viṁ", p:"throat",
+   a:{en:"Discernment",hi:"विवेक",mr:"विवेक",sa:"विवेकः"},
+   i:{en:"Separation, discrimination — the intelligence that tells the real from the merely convincing.",
+      hi:"विभाजन, विवेक — वह बुद्धि जो सत्य को केवल विश्वसनीय से अलग करती है।",
+      mr:"विभाजन, विवेक — सत्याला केवळ विश्वासार्ह वाटणाऱ्यापासून वेगळे करणारी बुद्धी.",
+      sa:"विवेचनम् — सत्यम् असत्यात् पृथक् कर्तुं शीलं बुद्धिः।"} },
+ { d:"तु", r:"tu", b:"tuṁ", p:"navel",
+   a:{en:"Impulse",hi:"प्रेरणा",mr:"प्रेरणा",sa:"प्रेरणा"},
+   i:{en:"The push that sets things moving — creation as a verb rather than a finished thing.",
+      hi:"वह आवेग जो सब कुछ गतिमान करता है — सृष्टि एक क्रिया, कोई पूर्ण वस्तु नहीं।",
+      mr:"सर्व गती देणारा आवेग — सृष्टी ही क्रिया आहे, पूर्ण वस्तू नाही.",
+      sa:"प्रेरणा — यया सर्वं गतिं लभते; सृष्टिः क्रिया, न वस्तु।"} },
+ { d:"र्व", r:"rva", b:"rvaṁ", p:"heart",
+   a:{en:"All-pervading",hi:"व्यापकता",mr:"व्यापकता",sa:"व्याप्तिः"},
+   i:{en:"From the root uru, “wide”. Expansion without edge — the spaciousness in which everything appears.",
+      hi:"मूल “उरु” से — विस्तृत। बिना सीमा का फैलाव, वह विशालता जिसमें सब प्रकट होता है।",
+      mr:"“उरु” म्हणजे विस्तीर्ण या मुळापासून. सीमा नसलेला विस्तार — ज्यात सर्व प्रकट होते ते विशालत्व.",
+      sa:"“उरु” इति मूलात् — विस्तीर्णम्। अन्तरहितं विस्तारं, यत्र सर्वं प्रकाशते।"} },
+ { d:"रे", r:"re", b:"reṁ", p:"brow",
+   a:{en:"Radiance",hi:"किरण",mr:"किरण",sa:"किरणः"},
+   i:{en:"The ray — a single beam of knowledge striking the dark. Cognate with the fire of insight.",
+      hi:"किरण — अंधकार पर पड़ती ज्ञान की एक किरण, भीतर के अग्नि से जुड़ी।",
+      mr:"किरण — अंधारावर पडणारा ज्ञानाचा एक किरण, अंतरंगाच्या अग्नीशी जोडलेला.",
+      sa:"किरणः — तमसि पतन् ज्ञानरश्मिः, अन्तरग्निना सह सम्बद्धः।"} },
+ { d:"ण्यं", r:"ṇyaṁ", b:"ṇyaṁ", p:"crown",
+   a:{en:"Illumination",hi:"दीप्ति",mr:"दीप्ती",sa:"दीप्तिः"},
+   i:{en:"The nasal hum at the end carries the sound upward into the crown — light experienced as resonance rather than as sight.",
+      hi:"अंत की अनुनासिक गूँज नाद को मूर्धा तक ले जाती है — प्रकाश यहाँ दृश्य नहीं, अनुनाद बन जाता है।",
+      mr:"शेवटची अनुनासिक गुंज नादाला मस्तकापर्यंत नेते — प्रकाश इथे दृश्य नाही, अनुनाद बनतो.",
+      sa:"अन्ते अनुनासिकध्वनिः नादं मूर्ध्नि नयति — प्रकाशः अत्र दृश्यं न, अनुनादः।"} },
+ { d:"भ", r:"bha", b:"bhaṁ", p:"heart",
+   a:{en:"Lustre",hi:"भास",mr:"भास",sa:"भाः"},
+   i:{en:"The shine that removes darkness. Bharga — the light that does not merely illuminate but dissolves.",
+      hi:"वह आभा जो अंधकार हटाती है। भर्ग — वह प्रकाश जो केवल प्रकाशित नहीं करता, विलीन करता है।",
+      mr:"अंधार हटवणारी आभा. भर्ग — केवळ प्रकाश देणारा नाही, विलय करणारा प्रकाश.",
+      sa:"यः भासः तमो हरति। भर्गः — यः केवलं प्रकाशयति न, अपि तु तमो विलापयति।"} },
+ { d:"र्गो", r:"rgo", b:"rgoṁ", p:"brow",
+   a:{en:"Splendour",hi:"आभा",mr:"आभा",sa:"आभा"},
+   i:{en:"The beauty of the sun of consciousness — the reason the mantra calls this light vareṇya, “worthy of choosing”.",
+      hi:"चेतना के सूर्य का सौंदर्य — इसी कारण मंत्र इस प्रकाश को “वरेण्य” कहता है, अर्थात् चुनने योग्य।",
+      mr:"चैतन्यसूर्याचे सौंदर्य — म्हणूनच मंत्र या प्रकाशाला “वरेण्य” म्हणजे निवडण्यायोग्य म्हणतो.",
+      sa:"चिन्मयसूर्यस्य कान्तिः — अतः एव मन्त्रः तं प्रकाशं “वरेण्यम्” इति वदति।"} },
+ { d:"दे", r:"de", b:"deṁ", p:"crown",
+   a:{en:"The divine",hi:"देव",mr:"देव",sa:"देवः"},
+   i:{en:"From div, “to shine”. A deva is not a ruler but a giver of light — the root of the English “divine”.",
+      hi:"“दिव्” से — चमकना। देव शासक नहीं, प्रकाश देने वाला है — यही शब्द अंग्रेज़ी “divine” का मूल भी है।",
+      mr:"“दिव्” म्हणजे चमकणे. देव हा शासक नाही, प्रकाश देणारा आहे — हाच शब्द “divine” चे मूळ.",
+      sa:"“दिव्” धातोः — दीप्तौ। देवः न शासकः, प्रकाशदाता — अस्यैव “divine” शब्दस्य मूलम्।"} },
+ { d:"व", r:"va", b:"vaṁ", p:"throat",
+   a:{en:"Movement",hi:"वायु",mr:"वायू",sa:"वायुः"},
+   i:{en:"Wind and breath — the syllable that carries sound at all. Nothing is spoken without it.",
+      hi:"वायु और प्राण — वह अक्षर जिसके बिना कोई ध्वनि नहीं निकलती।",
+      mr:"वारा आणि प्राण — ज्याशिवाय कोणताही ध्वनी बाहेर पडत नाही ते अक्षर.",
+      sa:"वायुः प्राणश्च — यस्मिन् विना न कापि ध्वनिः निःसरति।"} },
+ { d:"स्य", r:"sya", b:"syaṁ", p:"heart",
+   a:{en:"Belonging to",hi:"संबंध",mr:"संबंध",sa:"सम्बन्धः"},
+   i:{en:"A genitive — the light is not separate from us; it belongs to the divine and is offered to us.",
+      hi:"षष्ठी विभक्ति — प्रकाश हमसे अलग नहीं; वह दिव्य का है और हमें दिया गया है।",
+      mr:"षष्ठी विभक्ती — प्रकाश आपल्यापासून वेगळा नाही; तो दिव्याचा आहे आणि आपल्याला दिला आहे.",
+      sa:"षष्ठीविभक्तिः — प्रकाशः अस्मत्तः पृथक् न; सः दिव्यस्य, अस्मभ्यं च दत्तः।"} },
+ { d:"धी", r:"dhī", b:"dhīṁ", p:"brow",
+   a:{en:"Meditative wisdom",hi:"प्रज्ञा",mr:"प्रज्ञा",sa:"प्रज्ञा"},
+   i:{en:"Not cleverness but the deeper faculty that sees — dhī, the intelligence that grows out of stillness.",
+      hi:"चतुराई नहीं, देखने वाली गहरी शक्ति — धी, वह बुद्धि जो ठहराव से उगती है।",
+      mr:"हुशारी नाही, पाहणारी सखोल शक्ती — धी, जी स्थिरतेतून उगवते ती बुद्धी.",
+      sa:"न चातुर्यं, किन्तु द्रष्ट्री गभीरा शक्तिः — धीः, या स्थिरतायाः उदेति।"} },
+ { d:"म", r:"ma", b:"maṁ", p:"throat",
+   a:{en:"Mind",hi:"मन",mr:"मन",sa:"मनः"},
+   i:{en:"The receiving mind, and the mother-sound ma — the hum of the closed mouth, the most inward of consonants.",
+      hi:"ग्रहण करने वाला मन, और माता-स्वर “म” — बंद ओंठों की गूँज, सबसे अंतर्मुख व्यंजन।",
+      mr:"ग्रहण करणारे मन, आणि माता-स्वर “म” — बंद ओठांची गुंज, सर्वात अंतर्मुख व्यंजन.",
+      sa:"ग्राहकं मनः, मातृस्वरः “म” च — पिहितौष्ठस्य गुञ्जनम्, अन्तर्मुखतमं व्यञ्जनम्।"} },
+ { d:"हि", r:"hi", b:"hiṁ", p:"heart",
+   a:{en:"Indeed",hi:"निश्चय",mr:"निश्चय",sa:"निश्चयः"},
+   i:{en:"A particle of certainty. The prayer does not wish — it asserts, and in asserting, commits.",
+      hi:"निश्चय का अव्यय। यह प्रार्थना केवल इच्छा नहीं करती — वह कहती है, और कहते हुए वचन देती है।",
+      mr:"निश्चयाचा अव्यय. ही प्रार्थना फक्त इच्छा करत नाही — ती सांगते, आणि सांगताना वचन देते.",
+      sa:"निश्चयार्थकम् अव्ययम्। प्रार्थना न केवलम् इच्छति — कथयति, कथयन्ती प्रतिजानाति।"} },
+ { d:"धि", r:"dhi", b:"dhiṁ", p:"brow",
+   a:{en:"Contemplation",hi:"धारणा",mr:"धारणा",sa:"धारणा"},
+   i:{en:"From the same root as dhī — to hold. The light is not merely seen once; it is held, carried, kept.",
+      hi:"धी के ही मूल से — धारण करना। प्रकाश एक बार देखा नहीं जाता; उसे धारण किया जाता है।",
+      mr:"धीच्याच मुळापासून — धारण करणे. प्रकाश एकदा पाहून होत नाही; तो धारण केला जातो.",
+      sa:"धीशब्दस्य मूलात् — धारणम्। प्रकाशः एकवारं न दृश्यते; सः धार्यते।"} },
+ { d:"यो", r:"yo", b:"yoṁ", p:"heart",
+   a:{en:"Union",hi:"योग",mr:"योग",sa:"योगः"},
+   i:{en:"The syllable of yoking — the same root that gives yoga. Intelligence joined back to its source.",
+      hi:"जोड़ने का अक्षर — वही मूल जिससे “योग” बना। बुद्धि का अपने स्रोत से पुनर्मिलन।",
+      mr:"जोडणारे अक्षर — ज्याच्यापासून “योग” बनले तेच मूळ. बुद्धीचे तिच्या उगमाशी पुनर्मिलन.",
+      sa:"योजनस्य अक्षरम् — योगशब्दस्य मूलम्। बुद्धेः स्वस्रोतेन पुनः संयोगः।"} },
+ { d:"यो", r:"yo", b:"yoṁ", p:"throat",
+   a:{en:"Surge",hi:"ऊर्जा",mr:"ऊर्जा",sa:"ऊर्जा"},
+   i:{en:"The second yo — the repeat is deliberate. Enthusiasm rising again, not a stutter in the metre.",
+      hi:"दूसरा “यो” — यह पुनरावृत्ति जानबूझकर है। उत्साह का फिर उठना, छंद की कोई गड़बड़ नहीं।",
+      mr:"दुसरे “यो” — हा पुनरुच्चार हेतुपूर्वक आहे. उत्साहाचा पुन्हा उन्मेष, छंदाची चूक नाही.",
+      sa:"द्वितीयः “यो” — पुनरुक्तिः बुद्धिपूर्वा। उत्साहस्य पुनरुत्थानम्, न छन्दोदोषः।"} },
+ { d:"नः", r:"naḥ", b:"naḥ", p:"heart",
+   a:{en:"Our — not mine",hi:"हमारा",mr:"आपले",sa:"अस्माकम्"},
+   i:{en:"The mantra never says “my”. It is plural by design: the light is asked for the whole community, never for oneself alone.",
+      hi:"मंत्र कभी “मेरी” नहीं कहता। यह जानबूझकर बहुवचन है: प्रकाश पूरे समुदाय के लिए माँगा गया है।",
+      mr:"मंत्र कधीही “माझी” म्हणत नाही. हे हेतुपूर्वक बहुवचन आहे: प्रकाश संपूर्ण समुदायासाठी मागितला आहे.",
+      sa:"मन्त्रः कदापि “मम” न वदति। बहुवचनं बुद्धिपूर्वम् — प्रकाशः सर्वसमुदायाय याच्यते।"} },
+ { d:"प्र", r:"pra", b:"praṁ", p:"navel",
+   a:{en:"Forward",hi:"प्रगति",mr:"प्रगती",sa:"प्रगतिः"},
+   i:{en:"The prefix of forward motion — pro-. Nothing here asks to be left as it is.",
+      hi:"आगे बढ़ने का उपसर्ग। यहाँ कोई यह नहीं माँगता कि सब जैसा है वैसा ही रहे।",
+      mr:"पुढे जाण्याचा उपसर्ग. इथे कोणीही “जैसे आहे तैसे राहू दे” मागत नाही.",
+      sa:"पुरोगमनस्य उपसर्गः। अत्र न कोऽपि “यथास्थितम्” इति याचते।"} },
+ { d:"चो", r:"cho", b:"choṁ", p:"throat",
+   a:{en:"Awakening",hi:"जागरण",mr:"जागरण",sa:"जागरणम्"},
+   i:{en:"From chud, “to impel”. The light does not merely shine on us — it prods, unsettles, sets us in motion.",
+      hi:"“चुद्” से — प्रेरित करना। प्रकाश केवल चमकता नहीं — वह झिंझोड़ता है, गति देता है।",
+      mr:"“चुद्” म्हणजे प्रेरित करणे. प्रकाश केवळ चमकत नाही — तो ढवळून काढतो, गती देतो.",
+      sa:"“चुद्” धातोः — प्रेरणे। प्रकाशः न केवलं दीप्यते — सः प्रेरयति, चालयति।"} },
+ { d:"द", r:"da", b:"daṁ", p:"heart",
+   a:{en:"Giving",hi:"दान",mr:"दान",sa:"दानम्"},
+   i:{en:"The syllable of the gift. What is asked for is given — da is also the root of dāna, generosity.",
+      hi:"उपहार का अक्षर। जो माँगा गया है वह दिया जाता है — “द” ही “दान” का मूल है।",
+      mr:"उपहाराचे अक्षर. जे मागितले ते दिले जाते — “द” हेच “दान” चे मूळ.",
+      sa:"दानस्य अक्षरम्। यत् याच्यते तत् दीयते — “द” एव “दान” शब्दस्य मूलम्।"} },
+ { d:"या", r:"yā", b:"yāṁ", p:"brow",
+   a:{en:"Going",hi:"गति",mr:"गती",sa:"गतिः"},
+   i:{en:"The journey itself — the long vowel yā stretches the syllable, as if the movement needed room.",
+      hi:"यात्रा स्वयं — दीर्घ “या” अक्षर को खींचता है, मानो गति को स्थान चाहिए।",
+      mr:"प्रवास स्वतः — दीर्घ “या” अक्षर लांबवते, जणू गतीला जागा हवी आहे.",
+      sa:"यात्रा स्वयम् — दीर्घः “या” अक्षरं विस्तारयति, यथा गतये अवकाशः आवश्यकः।"} },
+ { d:"त्", r:"t", b:"t", p:"crown",
+   a:{en:"Stillness",hi:"शांति",mr:"शांती",sa:"शान्तिः"},
+   i:{en:"A bare consonant with no vowel — the mantra ends by falling into silence. The last syllable is the absence of sound.",
+      hi:"बिना स्वर का व्यंजन — मंत्र मौन में गिरकर समाप्त होता है। अंतिम अक्षर ध्वनि का अभाव है।",
+      mr:"स्वर नसलेले व्यंजन — मंत्र मौनात विरघळून संपतो. शेवटचे अक्षर म्हणजे ध्वनीचा अभाव.",
+      sa:"स्वररहितं व्यञ्जनम् — मन्त्रः मौने पतन् समाप्यते। अन्तिमम् अक्षरं नादाभावः।"} }
+];
+
+/* ============================================================
+   SCIENCE OF VIBRATION
+   ============================================================ */
+const SCIENCE = {
+  humans: [
+   { t:{en:"Attention and mental clarity",hi:"ध्यान और मानसिक स्पष्टता",mr:"लक्ष आणि मनःस्पष्टता",sa:"मनःप्रसादः"},
+     d:{en:"Twenty-four syllables in a fixed order, repeated slowly, give the mind one object to hold. That is the classic training of attention — the same principle behind any focused practice, whether a mantra or a breath count.",
+        hi:"चौबीस अक्षर, एक निश्चित क्रम में, धीरे-धीरे दोहराए जाएँ, तो मन को पकड़ने के लिए एक ही आधार मिलता है। यही ध्यान का शास्त्रीय अभ्यास है — मंत्र हो या श्वास की गिनती, सिद्धांत एक ही है।",
+        mr:"चोवीस अक्षरे, ठराविक क्रमाने, हळूहळू पुनरावृत्त केली की मनाला धरून ठेवण्यास एकच आधार मिळतो. हाच ध्यानाचा अभिजात अभ्यास — मंत्र असो वा श्वासाची गणना, तत्त्व तेच.",
+        sa:"चतुर्विंशतिरक्षराणि नियतक्रमेण मन्दं पुनःपुनः उच्चारितानि मनसः एकमेव आलम्बनं ददति। एष एव ध्यानस्य शास्त्रीयः अभ्यासः।"} },
+   { t:{en:"Calming the autonomic nervous system",hi:"स्वायत्त तंत्रिका तंत्र को शांत करना",mr:"स्वयंचलित मज्जासंस्था शांत करणे",sa:"स्वायत्तनाडीसंस्थायाः शमनम्"},
+     d:{en:"Chanting lengthens the out-breath, and slow-paced breathing is among the better-studied ways to shift the body toward parasympathetic, rest-and-digest activity. Research on slow breathing near six breaths a minute reports lower arousal and steadier heart-rate variability.",
+        hi:"जप से श्वास बाहर लंबा होता है, और धीमी श्वास शरीर को विश्राम-अवस्था (पैरासिम्पैथेटिक) की ओर ले जाने के सबसे अधिक अध्ययन किए गए उपायों में है। छह श्वास प्रति मिनट की गति पर शोध कम उत्तेजना और स्थिर हृदय-गति परिवर्तनशीलता दर्ज करते हैं।",
+        mr:"जपाने श्वास बाहेर पडण्याचा काळ वाढतो, आणि संथ श्वास शरीराला विश्रांती-अवस्थेकडे नेण्याचा सर्वाधिक अभ्यासलेला मार्ग आहे. मिनिटाला सहा श्वासांच्या गतीवरील संशोधन कमी उत्तेजना व स्थिर हृदयगती-परिवर्तनशीलता नोंदवते.",
+        sa:"जपेन निःश्वासः दीर्घः भवति; मन्दश्वासः शरीरं विश्रामावस्थां प्रति नयति इति बहुशः अध्ययनं विद्यते। षट्श्वासप्रमाणगत्या अध्ययनेषु अल्पोद्वेगः स्थिरा हृदयगतिश्च दृश्यते।"} },
+   { t:{en:"The subtle energy centres",hi:"सूक्ष्म ऊर्जा केंद्र",mr:"सूक्ष्म ऊर्जाकेंद्रे",sa:"सूक्ष्मशक्तिकेन्द्राणि"},
+     d:{en:"In the traditional map the sound is felt along the palate, throat, heart and brow — the regions of the viśuddhi, anāhata and ājñā centres. This claim is experiential rather than measurable: practitioners describe the mantra as light moving upward through the body.",
+        hi:"परंपरागत मानचित्र में यह नाद तालु, कंठ, हृदय और भ्रूमध्य में अनुभव होता है — विशुद्धि, अनाहत और आज्ञा केंद्रों का क्षेत्र। यह दावा अनुभव का है, मापन का नहीं: साधक इसे शरीर में ऊपर उठता प्रकाश बताते हैं।",
+        mr:"परंपरागत नकाशानुसार हा नाद ताळू, घसा, हृदय व भ्रूमध्य येथे अनुभवला जातो — विशुद्धी, अनाहत व आज्ञा केंद्रांचा प्रदेश. हा दावा अनुभवाचा आहे, मोजण्याचा नाही: साधक याला शरीरात वर जाणारा प्रकाश म्हणतात.",
+        sa:"परम्परया अयं नादः तालौ कण्ठे हृदि भ्रूमध्ये च अनुभूयते — विशुद्ध्यनाहताज्ञाख्यानां केन्द्राणां प्रदेशः। एतत् अनुभवविषयः, न मापनविषयः।"} },
+   { t:{en:"Cognition through precise phonetics",hi:"सटीक उच्चारण से बुद्धि",mr:"अचूक उच्चारातून बुद्धी",sa:"सम्यगुच्चारणेन प्रज्ञा"},
+     d:{en:"Sanskrit rests on a systematic inventory of sounds, and the Gayatri's syllables are ordered so that tongue, palate and lips travel deliberately. Recitation couples rhythm, breath and articulation — the combination verbal-memory research finds easiest to retain.",
+        hi:"संस्कृत ध्वनियों की व्यवस्थित सूची पर खड़ी है, और गायत्री के अक्षर इस तरह क्रमबद्ध हैं कि जिह्वा, तालु और ओष्ठ सचेत रूप से चलते हैं। जप में लय, श्वास और उच्चारण एक साथ जुड़ते हैं — यही संयोजन स्मृति-शोध में सबसे सहज टिकने वाला पाया गया है।",
+        mr:"संस्कृत ध्वनींच्या क्रमबद्ध यादीवर उभे आहे, आणि गायत्रीची अक्षरे अशी रचली आहेत की जीभ, ताळू व ओठ जाणीवपूर्वक हलतात. जपात लय, श्वास व उच्चार एकत्र जुळतात — स्मृती-संशोधनात हेच संयोजन सर्वात सहज टिकते.",
+        sa:"संस्कृतं ध्वनिसमूहस्य क्रमे व्यवस्थितम्; गायत्र्याः अक्षराणि तथा रचितानि यथा जिह्वाताल्वोष्ठाः सचेतनं चलन्ति। जपे लयः श्वासः उच्चारणं च युज्यन्ते।"} },
+   { t:{en:"The three vyāhṛtis and the silence",hi:"तीन व्याहृतियाँ और मौन",mr:"तिन्ही व्याहृती आणि मौन",sa:"व्याहृतयः मौनं च"},
+     d:{en:"The mantra opens with bhūr, bhuvaḥ, svaḥ — earth, mid-space, heaven — and ends in silence. The structure is itself a meditation: from the grossest register of sound to the finest, and then to no sound at all.",
+        hi:"मंत्र भूः, भुवः, स्वः — भू, अंतरिक्ष, स्वर्ग — से खुलता है और मौन में समाप्त होता है। यह रचना स्वयं एक ध्यान है: ध्वनि के स्थूलतम स्तर से सूक्ष्मतम तक, और फिर नाद-रहित मौन तक।",
+        mr:"मंत्र भूः, भुवः, स्वः — पृथ्वी, अंतराळ, द्युलोक — ने सुरू होतो आणि मौनात संपतो. ही रचनाच एक ध्यान आहे: ध्वनीच्या स्थूलातून सूक्ष्माकडे, आणि मग नादशून्य मौनाकडे.",
+        sa:"मन्त्रः भूर्भुवःस्वः इति आरभ्यते, मौने च समाप्यते। एषा रचना स्वयमेव ध्यानम् — स्थूलनादात् सूक्ष्मं प्रति, ततः नादशून्यं मौनम्।"} }
+  ],
+  nature: [
+   { t:{en:"Śabda-Brahman: sound as the world's fabric",hi:"शब्द-ब्रह्म: नाद ही सृष्टि का ताना-बाना",mr:"शब्दब्रह्म: नाद हेच सृष्टीचे वस्त्र",sa:"शब्दब्रह्म"},
+     d:{en:"Vedic thought holds that sound is not a description of reality but its substance. In that view a mantra is not a request sent outward — it is a tuning of the instrument that receives.",
+        hi:"वैदिक दृष्टि कहती है कि शब्द सत्य का वर्णन नहीं, सत्य का ही तत्त्व है। इस दृष्टि में मंत्र बाहर भेजी गई प्रार्थना नहीं, बल्कि ग्रहण करने वाले वाद्य का स्वर-मेल है।",
+        mr:"वैदिक विचार म्हणतो शब्द हे सत्याचे वर्णन नाही, तर सत्याचेच तत्त्व आहे. या दृष्टीने मंत्र बाहेर पाठवलेली प्रार्थना नाही, तर ग्रहण करणाऱ्या वाद्याची जुळवणी आहे.",
+        sa:"वैदिकमते शब्दः सत्यस्य वर्णनं न, अपि तु सत्यस्य तत्त्वम् — शब्दब्रह्म। तेन मन्त्रः बहिर्गता प्रार्थना न, ग्राहकवाद्यस्य संस्कारः।"} },
+   { t:{en:"Cymatics: sound made visible",hi:"साइमेटिक्स: ध्वनि का दृश्य रूप",mr:"सायमेटिक्स: ध्वनीचे दृश्य रूप",sa:"सायमेटिक्स् — दृश्यो नादः"},
+     d:{en:"When a plate covered in sand or water is vibrated at a fixed frequency, the grains settle into ordered patterns. Ernst Chladni drew them in the 1780s; Hans Jenny filmed them in the twentieth century. The demonstration is real. The leap from patterns in a dish to the effect of chanting on a landscape is not one science has made.",
+        hi:"बालू या जल से भरी थाली को एक स्थिर आवृत्ति पर कंपित करने से कण व्यवस्थित आकृतियों में बैठ जाते हैं। क्लाडनी ने १७८० के दशक में इन्हें चित्रित किया, हंस जेनी ने बीसवीं सदी में फिल्माया। प्रयोग सच है। थाली की आकृतियों से लेकर जप के भू-दृश्य पर प्रभाव तक की छलांग विज्ञान ने नहीं लगाई है।",
+        mr:"वाळू किंवा पाण्याने भरलेली ताटली ठराविक आवृत्तीवर कंपित केल्यास कण सुव्यवस्थित आकारांत बसतात. क्लाडनीने १७८० च्या दशकात हे चित्रित केले, हान्स जेनीने विसाव्या शतकात चित्रित केले. प्रयोग खरा आहे. ताटलीतील आकारांपासून जपाचा भूदृश्यावर होणाऱ्या परिणामापर्यंतची उडी विज्ञानाने मारलेली नाही.",
+        sa:"सिकताभिः जलेन वा पूर्णं पात्रं नियतस्पन्दनेन कम्पितं चेत् कणाः क्रमेण आकृतिं रचयन्ति। प्रयोगः सत्यः; पात्राकृतेः आरभ्य सामूहिकजपस्य भूदृश्ये प्रभावः इति उत्प्लवनं विज्ञानेन न कृतम्।"} },
+   { t:{en:"Water and plants",hi:"जल और पौधे",mr:"पाणी आणि वनस्पती",sa:"जलं वनस्पतयश्च"},
+     d:{en:"Photographs of water crystals responding to words are widely shared, but the method has not survived scrutiny and mainstream science does not accept them as evidence. Studies of sound and vibration on plant growth are mixed — some show small effects, many show none.",
+        hi:"शब्दों पर प्रतिक्रिया देते जल-क्रिस्टल की तस्वीरें बहुत प्रचलित हैं, पर वह विधि समीक्षा में टिक नहीं पाई और मुख्यधारा विज्ञान उन्हें प्रमाण नहीं मानता। ध्वनि-कंपन और पौधों की वृद्धि पर अध्ययन मिश्रित हैं — कुछ में थोड़ा प्रभाव दिखा, कई में कुछ नहीं।",
+        mr:"शब्दांना प्रतिसाद देणाऱ्या जल-स्फटिकांची छायाचित्रे खूप प्रसारित होतात, पण ती पद्धत तपासणीत टिकली नाही आणि मुख्य प्रवाहातील विज्ञान ती पुरावा मानत नाही. ध्वनी-कंपन आणि वनस्पतींची वाढ यांवरील अभ्यास मिश्र आहेत — काहींत थोडा परिणाम दिसला, अनेकांत काहीच नाही.",
+        sa:"जलस्फटिकानां शब्दप्रतिक्रियाचित्राणि बहु प्रसृतानि, किन्तु तत्पद्धतिः परीक्षायां न तिष्ठति, मुख्यविज्ञानं तत् प्रमाणं न स्वीकरोति। ध्वनिकम्पस्य वनस्पतिवृद्धौ प्रभावः विषये अध्ययनानि मिश्रितानि।"} },
+   { t:{en:"Collective chanting and entrainment",hi:"सामूहिक जप और ताल-मेल",mr:"सामूहिक जप आणि तालजुळणी",sa:"सामूहिकजपः"},
+     d:{en:"When a group chants together, breath and voice synchronise — a well-documented social entrainment. Practitioners describe the result as a shared field of calm. At minimum, it is a reliable way to make slow breathing easy to sustain.",
+        hi:"समूह में जप करते समय श्वास और स्वर एक लय में आ जाते हैं — यह सामाजिक ताल-मेल का सुपरिचित उदाहरण है। साधक इसे साझा शांति-क्षेत्र कहते हैं। कम से कम इतना निश्चित है कि समूह में धीमी श्वास सहज बनी रहती है।",
+        mr:"गटाने जप करताना श्वास व स्वर एका लयीत येतात — हे सामाजिक तालजुळणीचे सुपरिचित उदाहरण आहे. साधक याला सामायिक शांततेचे क्षेत्र म्हणतात. किमान एवढे निश्चित की गटात संथ श्वास सहज टिकतो.",
+        sa:"समूहे जपति सति श्वासः स्वरश्च एकलये युज्येते। साधकाः तत् सामूहिकशान्तिक्षेत्रम् इति वदन्ति; न्यूनतमं तु — समूहे मन्दश्वासः सुकरः भवति।"} }
+  ]
+};
+
+/* ============================================================
+   PRACTICE
+   ============================================================ */
+const PRACTICE = [
+ { n:"01", t:{en:"Sit, and steady the breath",hi:"बैठें और श्वास स्थिर करें",mr:"बसा आणि श्वास स्थिर करा",sa:"उपविश्य श्वासं स्थिरं कुरु"},
+   d:{en:"Sit comfortably with the spine tall and the shoulders loose. Let the breath settle into a slow, even rhythm before you say anything at all.",
+      hi:"आराम से बैठें, रीढ़ सीधी और कंधे ढीले रखें। कुछ कहने से पहले श्वास को धीमी, समान लय में बहने दें।",
+      mr:"आरामात बसा, पाठ सरळ आणि खांदे सैल ठेवा. काही बोलण्यापूर्वी श्वास हळू व समान लयीत वाहू द्या.",
+      sa:"सुखेन उपविश्य ऋजुं देहं कृत्वा श्वासं मन्दं समं च वह।"} },
+ { n:"02", t:{en:"Chant three times, slowly",hi:"तीन बार धीरे-धीरे जपें",mr:"तीन वेळा हळूवार जप करा",sa:"त्रिः मन्दं जप"},
+   d:{en:"Begin with the three vyāhṛtis — bhūr, bhuvaḥ, svaḥ — then the mantra itself, letting each of the twenty-four syllables land rather than rush.",
+      hi:"पहले तीन व्याहृतियाँ — भूः, भुवः, स्वः — फिर मंत्र, हर अक्षर को ठहरने दें, जल्दबाज़ी न करें।",
+      mr:"आधी तीन व्याहृती — भूः, भुवः, स्वः — नंतर मंत्र, प्रत्येक अक्षरावर थांबत, घाई न करता.",
+      sa:"प्रथमं तिस्रो व्याहृतीः — भूः भुवः स्वः — ततः मन्त्रं, प्रत्येकमक्षरं स्थिरीकुर्वन्।"} },
+ { n:"03", t:{en:"Rest in the silence",hi:"मौन में विश्राम करें",mr:"शांततेत विसावा",sa:"मौने विश्रामं कुरु"},
+   d:{en:"After the last syllable, stay still for a few breaths. The silence is not the gap between repetitions — it is part of the practice.",
+      hi:"अंतिम अक्षर के बाद कुछ श्वास तक शांत बैठे रहें। मौन दोहराव के बीच का अंतराल नहीं — वह साधना का अंग है।",
+      mr:"शेवटच्या अक्षरानंतर काही श्वास शांत बसा. मौन म्हणजे पुनरुच्चारांमधील अंतर नाही — तो साधनेचा भाग आहे.",
+      sa:"अन्तिमाक्षरानन्तरं कतिचित् श्वासान् मौने तिष्ठ। मौनं न पुनरुक्त्यन्तरम् — साधनाङ्गम् एव।"} }
+];
+
+/* ============================================================
+   APP LOGIC
+   ============================================================ */
+(function(){
+  "use strict";
+
+  const $  = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const root = document.documentElement;
+
+  let lang = "en";
+  let currentIndex = 0;
+
+  /* storage that cannot throw (file://, private mode, blocked cookies) */
+  const store = {
+    get(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  /* ---------------- THEME ---------------- */
+  const storedTheme = store.get("gayatri-theme");
+  if (storedTheme) {
+    root.setAttribute("data-theme", storedTheme);
+  } else {
+    root.setAttribute("data-theme", window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  }
+
+  $("#themeToggle").addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    store.set("gayatri-theme", next);
+  });
+
+  /* ---------------- LANGUAGE ---------------- */
+  function t(key) {
+    return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || "";
+  }
+
+  function applyLanguage(next, remember) {
+    lang = I18N[next] ? next : "en";
+    if (remember !== false) store.set("gayatri-lang", lang);
+
+    root.setAttribute("lang", lang === "sa" ? "sa" : lang);
+
+    $$("[data-i18n]").forEach(el => {
+      const v = t(el.dataset.i18n);
+      if (v) el.textContent = v;
+    });
+    $$("[data-i18n-html]").forEach(el => {
+      const v = t(el.dataset.i18nHtml);
+      if (v) el.innerHTML = v;
+    });
+    $$("[data-i18n-aria]").forEach(el => {
+      const v = t(el.dataset.i18nAria);
+      if (v) el.setAttribute("aria-label", v);
+    });
+
+    $$(".lang-btn").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+
+    renderVoices();
+    renderScience();
+    renderAksharas();
+    renderPractice();
+    renderJapa();
+    closeModal();
+  }
+
+  $$(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+  });
+
+  /* ---------------- VOICES ---------------- */
+  function renderVoices() {
+    const host = $("#voicesGrid");
+    host.innerHTML = VOICES.map(v => `
+      <article class="voice" data-active="${v.code === lang}">
+        <p class="vl"><i></i>${v.label}</p>
+        <p class="${v.script === "dev" ? "dev" : ""}">${v.text}</p>
+      </article>`).join("");
+  }
+
+  /* ---------------- SCIENCE ---------------- */
+  function accItem(item, i) {
+    return `
+      <div class="acc" data-acc>
+        <button class="acc-h" aria-expanded="false">
+          <span class="num">${String(i + 1).padStart(2, "0")}</span>
+          <span class="t">${item.t[lang] || item.t.en}</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="acc-b"><p>${item.d[lang] || item.d.en}</p></div>
+      </div>`;
+  }
+
+  function renderScience() {
+    $("#humanList").innerHTML  = SCIENCE.humans.map(accItem).join("");
+    $("#natureList").innerHTML = SCIENCE.nature.map(accItem).join("");
+    $$("[data-acc]").forEach((acc) => {
+      const head = $(".acc-h", acc);
+      const body = $(".acc-b", acc);
+      head.addEventListener("click", () => {
+        const open = acc.classList.toggle("open");
+        head.setAttribute("aria-expanded", String(open));
+        body.style.maxHeight = open ? body.scrollHeight + "px" : "0px";
+      });
+    });
+    // the first entry of each column starts open
+    ["#humanList", "#natureList"].forEach(sel => {
+      const first = $("[data-acc]", $(sel));
+      if (!first) return;
+      first.classList.add("open");
+      $(".acc-h", first).setAttribute("aria-expanded", "true");
+      $(".acc-b", first).style.maxHeight = $(".acc-b", first).scrollHeight + "px";
+    });
+  }
+
+  /* ---------------- AKSHARAS ---------------- */
+  function renderAksharas() {
+    const host = $("#akshaGrid");
+    host.innerHTML = AKSHARAS.map((a, i) => `
+      <button class="aksha" data-i="${i}" aria-label="${a.r} — ${a.a[lang] || a.a.en}">
+        <span class="n">${String(i + 1).padStart(2, "0")}</span>
+        <span class="glyph dev">${a.d}</span>
+        <span class="rom">${a.r}</span>
+        <span class="attr">${a.a[lang] || a.a.en}</span>
+        <span class="ins">${a.i[lang] || a.i.en}</span>
+      </button>`).join("");
+
+    $$(".aksha", host).forEach(btn => {
+      btn.addEventListener("click", () => openModal(Number(btn.dataset.i)));
+    });
+  }
+
+  /* ---------------- MODAL ---------------- */
+  const modal = $("#modal");
+  let lastFocus = null;
+
+  function openModal(i) {
+    const a = AKSHARAS[i];
+    currentIndex = i;
+    lastFocus = document.activeElement;
+    $("#mNum").textContent = String(i + 1).padStart(2, "0") + " " + t("of24");
+    $("#mGlyph").textContent = a.d;
+    $("#mRom").textContent = a.r;
+    $("#mAttr").textContent = a.a[lang] || a.a.en;
+    $("#mBody").textContent = a.i[lang] || a.i.en;
+    $("#mBeej").textContent = a.b;
+    $("#mPlace").textContent = PLACES[a.p][lang] || PLACES[a.p].en;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    $(".modal-close").focus();
+  }
+
+  function closeModal() {
+    if (!modal.classList.contains("open")) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+
+  $$("[data-close]").forEach(el => el.addEventListener("click", closeModal));
+
+  /* ---------------- PRACTICE ---------------- */
+  function renderPractice() {
+    $("#practiceGrid").innerHTML = PRACTICE.map(p => `
+      <article class="step" data-n="${p.n}">
+        <h3>${p.t[lang] || p.t.en}</h3>
+        <p>${p.d[lang] || p.d.en}</p>
+      </article>`).join("");
+  }
+
+  /* ---------------- AUDIO (synthesised drone) ---------------- */
+  const audio = { ctx: null, master: null, nodes: [], playing: false };
+  const audioBtn = $("#audioBtn");
+
+  function startTone() {
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return;
+    if (!audio.ctx) audio.ctx = new Ctx();
+    const ctx = audio.ctx;
+    if (ctx.state === "suspended") ctx.resume();
+
+    const master = ctx.createGain();
+    master.gain.value = 0.0001;
+    master.connect(ctx.destination);
+
+    // 136.1 Hz is the frequency traditionally linked to "Om"
+    const spec = [
+      { f: 136.10, g: 0.55 },
+      { f: 204.15, g: 0.24 },
+      { f: 272.20, g: 0.13 },
+      { f: 408.30, g: 0.05 }
+    ];
+
+    spec.forEach(s => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = s.f;
+      gain.gain.value = s.g;
+      osc.connect(gain).connect(master);
+      osc.start();
+      audio.nodes.push(osc);
+    });
+
+    // slow tremolo, like a breath
+    const lfo = ctx.createOscillator();
+    const lfoGain = ctx.createGain();
+    lfo.frequency.value = 0.09;
+    lfoGain.gain.value = 0.035;
+    lfo.connect(lfoGain).connect(master.gain);
+    lfo.start();
+    audio.nodes.push(lfo);
+
+    master.gain.exponentialRampToValueAtTime(0.16, ctx.currentTime + 3.5);
+    audio.master = master;
+    audio.playing = true;
+    audioBtn.classList.add("playing");
+    audioBtn.setAttribute("aria-pressed", "true");
+  }
+
+  function stopTone() {
+    if (!audio.ctx || !audio.playing) return;
+    const ctx = audio.ctx;
+    audio.master.gain.cancelScheduledValues(ctx.currentTime);
+    audio.master.gain.setValueAtTime(audio.master.gain.value, ctx.currentTime);
+    audio.master.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 1.2);
+    const nodes = audio.nodes.slice();
+    audio.nodes = [];
+    setTimeout(() => nodes.forEach(n => { try { n.stop(); } catch (e) {} }), 1400);
+    audio.playing = false;
+    audioBtn.classList.remove("playing");
+    audioBtn.setAttribute("aria-pressed", "false");
+  }
+
+  audioBtn.addEventListener("click", () => (audio.playing ? stopTone() : startTone()));
+
+  /* ---------------- JAPA COUNTER ---------------- */
+  const JAPA_KEY = "gayatri-japa";
+  const MALA = 108;
+  const RING = 2 * Math.PI * 54;
+  const japaCard  = $("#japaCard");
+  const japaBtn   = $("#japaBtn");
+  const japaNumEl = $("#japaNum");
+  const japaProg  = $("#japaProg");
+  const japaToast = $("#japaToast");
+  const japaFab   = $("#japaFab");
+  const fabNum    = $("#fabNum");
+  const fabProg   = $("#fabProg");
+
+  const japa = { count: 0, malas: 0, total: 0, muted: false };
+  try {
+    const savedJapa = JSON.parse(store.get(JAPA_KEY) || "{}");
+    if (typeof savedJapa.count === "number") japa.count = Math.min(Math.max(Math.round(savedJapa.count), 0), MALA - 1);
+    if (typeof savedJapa.malas === "number") japa.malas = Math.max(Math.round(savedJapa.malas), 0);
+    if (typeof savedJapa.total === "number") japa.total = Math.max(Math.round(savedJapa.total), 0);
+    japa.muted = !!savedJapa.muted;
+  } catch (e) { /* corrupt or absent — start fresh */ }
+
+  function saveJapa() {
+    store.set(JAPA_KEY, JSON.stringify(japa));
+  }
+
+  const DEV_DIGITS = "०१२३४५६७८९";
+  function japaNum(n) {
+    const s = String(n);
+    return lang === "en" ? s : s.replace(/[0-9]/g, d => DEV_DIGITS[+d]);
+  }
+
+  function renderJapa() {
+    japaNumEl.textContent = japaNum(japa.count);
+    $("#japaMalas").textContent = japaNum(japa.malas);
+    $("#japaTotal").textContent = japaNum(japa.total);
+    japaProg.style.strokeDasharray = RING.toFixed(1);
+    japaProg.style.strokeDashoffset = (RING * (1 - japa.count / MALA)).toFixed(1);
+    fabNum.textContent = japaNum(japa.count);
+    fabProg.style.strokeDasharray = RING.toFixed(1);
+    fabProg.style.strokeDashoffset = (RING * (1 - japa.count / MALA)).toFixed(1);
+    const snd = $("#japaSound");
+    snd.setAttribute("aria-pressed", String(!japa.muted));
+    snd.classList.toggle("off", japa.muted);
+  }
+
+  function tickSound() {
+    if (japa.muted) return;
+    try {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      if (!audio.ctx) audio.ctx = new Ctx();
+      const ctx = audio.ctx;
+      if (ctx.state === "suspended") ctx.resume();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const now = ctx.currentTime;
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(760, now);
+      osc.frequency.exponentialRampToValueAtTime(560, now + 0.09);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.05, now + 0.008);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.13);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start();
+      osc.stop(now + 0.15);
+    } catch (e) { /* audio is a nicety, never a failure */ }
+  }
+
+  let toastTimer = null;
+  function flashToast(msg) {
+    japaToast.textContent = msg;
+    japaToast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => japaToast.classList.remove("show"), 2600);
+  }
+
+  function addJapa(source) {
+    japa.count += 1;
+    japa.total += 1;
+    let finished = false;
+    if (japa.count >= MALA) {
+      japa.count = 0;
+      japa.malas += 1;
+      finished = true;
+    }
+    renderJapa();
+    saveJapa();
+    tickSound();
+
+    const btn = source || japaBtn;
+    btn.classList.remove("tick");
+    void btn.offsetWidth;   /* restart the ripple */
+    btn.classList.add("tick");
+
+    if (finished) {
+      japaCard.classList.add("done");
+      flashToast(t("japaDone"));
+      setTimeout(() => japaCard.classList.remove("done"), 2400);
+    }
+    if (navigator.vibrate) navigator.vibrate(finished ? [18, 60, 18] : 12);
+  }
+
+  japaBtn.addEventListener("click", () => addJapa(japaBtn));
+  japaFab.addEventListener("click", () => addJapa(japaFab));
+
+  $("#japaReset").addEventListener("click", () => {
+    japa.count = 0;
+    japa.malas = 0;
+    japa.total = 0;
+    renderJapa();
+    saveJapa();
+    flashToast(t("japaResetDone"));
+  });
+
+  $("#japaSound").addEventListener("click", () => {
+    japa.muted = !japa.muted;
+    renderJapa();
+    saveJapa();
+    if (!japa.muted) tickSound();
+  });
+
+  renderJapa();
+
+  /* ---------------- NAV / MENU ---------------- */
+  const nav = $("#nav");
+  const menuBtn = $("#menuBtn");
+
+  menuBtn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
+  $$("a", nav).forEach(a => a.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }));
+
+  /* ---------------- SCROLL: progress + header ---------------- */
+  const bar = $("#progress");
+  const head = $("#siteHead");
+  let ticking = false;
+
+  function onScroll() {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    head.classList.toggle("stuck", h.scrollTop > 12);
+
+    /* the floating button appears once you leave the hero,
+       and steps aside while the full counter is on screen */
+    const card = japaCard.getBoundingClientRect();
+    const cardOnScreen = card.top < window.innerHeight - 60 && card.bottom > 120;
+    japaFab.classList.toggle("hide", h.scrollTop < 420 || cardOnScreen);
+
+    ticking = false;
+  }
+  window.addEventListener("scroll", () => {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------------- REVEAL ---------------- */
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    $$(".reveal").forEach(el => io.observe(el));
+  } else {
+    $$(".reveal").forEach(el => el.classList.add("in"));
+  }
+
+  /* ---------------- KEYBOARD ---------------- */
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("open")) return;
+    if (e.key === "Escape") { closeModal(); return; }
+    if (e.key === "ArrowRight") { openModal((currentIndex + 1) % AKSHARAS.length); }
+    if (e.key === "ArrowLeft")  { openModal((currentIndex - 1 + AKSHARAS.length) % AKSHARAS.length); }
+  });
+
+  /* ---------------- BOOT ---------------- */
+  try {
+    applyLanguage(store.get("gayatri-lang") || "en", false);
+  } catch (err) {
+    /* never leave the page empty if anything unexpected fails */
+    document.documentElement.classList.add("no-js");
+    $$(".reveal").forEach(el => el.classList.add("in"));
+  }
+})();
+</script>
+</body>
+</html>
